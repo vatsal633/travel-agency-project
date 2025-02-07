@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+.videosection{
+    display: flex;
+    justify-content: center;
+}
+
 body {
     color: #666;
     font-family: 'Raleway', sans-serif;
