@@ -8,3 +8,5 @@ Database - MongoDB
 
 author - vatsal , brinda
 
+<h1>ues of this website</h1>
+<span>you can book hotels/span>
