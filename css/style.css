@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
 #myVideo {
     position: absolute;
     top: 50%;
