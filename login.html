@@ -28,7 +28,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="">
     <!-- Header Section Start -->
     <header id="header">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
@@ -49,23 +49,36 @@
     <!-- Header Section End -->
 
     <!-- Login Section Start -->
-    <div class="login bg-green h-full border d-flex  flex-column align-item-center">
-
-        
+    <div class="login opacity-75%">
         <form action="">
             <div class="header">
-                <h1 class="text-center"> Have an account?</h1>
+                <h1 class="text-center">Have an account?</h1>
             </div>
     
-            <div class="email">
-                <input type="email" name="" id="" placeholder="enter the email">
+            <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon>
+                </span>
+            <input type="email" class="vatsal padd" name="" id="" placeholder="enter the email">
             </div>
-
+    
             <div class="password-section">
-                <input type="password" name="" id="" placeholder="enter the password">
+                <ion-icon name="lock-closed"></ion-icon>
+                <input type="password" class=" border border-1 text-white  vatsal" name="" id="" placeholder="enter the password">
             </div>
-        </form>
-    </div>
+            <div class="remember-forgot">
+             <label><input type="checkbox"> Remember me </label>
+             <a href="#">Forgot password?</a>
+             </div>
+             <button type="submit">Login</button>
+             <div class="register-link">
+                <p>Don't have an account ?<a href="#">Register</a></p>
+            </div>
+            
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+                </form>
+    
     <!-- Login Section End -->
 
     <!-- Footer Section Start -->
