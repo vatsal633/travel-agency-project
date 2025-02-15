@@ -131,6 +131,14 @@
     -webkit-filter: blur(8px);
 }
 
+.login form {
+    background-color: #76767661;
+    padding: 29px;
+    border-radius: 7px;
+    margin: 34px 0;
+}
+
+
 .vatsal {
     opacity: 47%;
     color: white;
