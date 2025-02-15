@@ -31,6 +31,18 @@
 
 }
 
+.beautify-box {
+
+    opacity: 46%;
+    color: black;
+    width: 100%;
+    padding: 8px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: solid 1px white;
+
+}
+
 .input-box {
     position: relative;
     width: 100%;
@@ -42,32 +54,23 @@
 
 .input-box .icon {
     position: absolute;
-    left: 10px;
-    top: 50%;
+    right: 10px;
+    top: 57%;
     transform: translateY(-50%);
     pointer-events: none;
     /* Ensures that the icon does not interfere with typing */
 }
 
-.input-box input {
-    padding-left: 30px;
-    /* Space for the icon */
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-
 .password-section {
     position: relative;
     width: 100%;
-    color:black;
+    color: black;
 }
 
 
 .password-section ion-icon {
     position: absolute;
-    left: 10px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -78,12 +81,27 @@
     padding-left: 30px;
     /* Space for the icon */
     width: 100%;
+    font-weight: bold;
     box-sizing: border-box;
     /* For text visibility (optional) */
     border: 1px solid #ccc;
     /* Border styling (optional) */
-    color: white;
+    color: black;
     /* Text color */
+}
+
+
+.login-button-style{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    border-radius: 7px;
+    width: 53%;
+}
+
+.remember-forgot label{
+    font-weight:300;
 }
 
 
