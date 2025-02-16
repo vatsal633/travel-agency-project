@@ -31,6 +31,30 @@
 
 }
 
+.bg-whitee{
+    background-color: #ffffff42;
+    padding: 38px;
+    margin: 12px 0;
+    border-radius: 7px;
+}
+
+.register{
+    min-height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    flex-direction: column;
+    /* Keep form elements in a column layout */
+    background-image: url('../img//new_bg.jpg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .beautify-box {
 
     opacity: 46%;
@@ -67,6 +91,16 @@
     color: black;
 }
 
+.text-black{
+    color: black;
+    font-size: large;
+}
+
+.hover-style:hover{
+    background-color: #246896;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
 .password-section ion-icon {
     position: absolute;
@@ -101,8 +135,14 @@
 }
 
 .remember-forgot label{
-    font-weight:300;
+    font-weight:bold;
 }
+
+/* .remember-forgot a{
+    margin-left:4px;
+} */
+
+
 
 
 
@@ -1569,6 +1609,10 @@ input::-ms-input-placeholder {
     padding: 30px 0 25px 0;
     text-align: center;
     background: #222222;
+}
+
+.full-width{
+    width: 100%;
 }
 
 #footer .social {
