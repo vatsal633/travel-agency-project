@@ -38,6 +38,17 @@
     border-radius: 10px;
 }
 
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 75%;
+}
+* {
+
+
+
+
+
 .register{
     min-height: 100vh;
     /* Full height of the viewport */
