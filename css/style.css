@@ -11,6 +11,27 @@
     justify-content: center;
 }
 
+.hehe{
+    flex-direction: column;
+}
+
+.main-container{
+    display: flex;
+}
+
+.left-section{
+    width:50x;
+    padding: 50px 100px;
+}
+
+.content h1{
+    font-size: 35px;
+    margin button: 20px;
+}
+
+
+
+
 
 .login {
     min-height: 100vh;

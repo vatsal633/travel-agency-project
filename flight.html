@@ -54,6 +54,7 @@
             </ul>
         </nav>
     </header>
+   
 <div class="content"></div>
 <h1><center>Explore the  world<br>Book Your Flight with Us Today!</center>
 </h1>   
@@ -63,17 +64,19 @@
     </center>
     .</p>
        </div>
-        <center> <img src="img/airplane.jpg" alt="Airplane"></center>
+        <center> <img src="img/cloud.jpg" alt="Airplane"></center>
+        <main class="main-container">
+            <section class="left-section"></section>
        <form id =   "bookingform">
         <div class="trip-type">
             <label>
                 <input type="radio" name=" triptype" value="return" required>return
                 </label>
-                <abel>
+                
                 <input type="radio" name=" triptype" value="oneway" required>oneway
-                </abel> 
+            
         </div>
-        <div class=" input-group">
+        <div class=" input-group hehe">
             <div class="input-wrapper">
             <select id="takeoff" required>
             <option value="" disabled selected>Takeoff</option>
@@ -88,7 +91,46 @@
             <option value="PARIS">PARIS</option> <!--PARIS-->
             <option value="VELANA">VELANA</option> <!--MALDIVES-->
             <option value="DUBAI">DUBAI</option> <!--DUBAI-->
-          
+            </select>
+        </div>
+                <div class="icon">
+                    <ion-icon name="airplane"></ion-icon>
+
+                    
+                </div>
+                <div class=" input-group">
+                    <div class="input-wrapper">
+                    <select id="Arrival" required>
+                    <option value="" disabled selected>Arrival</option>
+                    <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                    <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                    <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                    <option value="DENPASAR">DENPASAR</option>  <!--bali-->
+                    <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                     <option value="DABOLIM">DABOLIM</option>   <!--GOA-->
+                    <option value="KHERIA">KHERIA</option> <!--TAJAMAHAL-->
+                    <option value="GENEVA">GENEVA</option> <!--SWITERLAND-->
+                    <option value="PARIS">PARIS</option> <!--PARIS-->
+                    <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                    <option value="DUBAI">DUBAI</option> <!--DUBAI-->
+                    </select>
+                </div>
+                <div class="input-group hehe">
+                    <div class="input-wrapper">
+                     <left> <br> <input type="date" id="departureDate" name="Date" required </br></left>                 </div>
+                </div>
+                <div class="icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </div>
+
+
+
+                <div class="input-group hehe">
+                    <div class="input-wrapper">
+                     <left> <br> <input type="date" id="returnDate" name="Date" required </br></left>                 </div>
+                </div>
+                <button type="submit">search</button>
+            </main>
 
         </select>
         </div>
@@ -164,6 +206,8 @@
     <script src="vendor/tempusdominus/js/moment.min.js"></script>
     <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
 
     <!-- Booking Javascript File -->
     <script src="js/booking.js"></script>
