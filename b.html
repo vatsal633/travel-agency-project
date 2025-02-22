@@ -1,0 +1,86 @@
+
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container text-center">
+            <h1>Travel Easy - Bus Booking</h1>
+            <p>Book your journey online and travel in comfort and style.</p>
+        </div>
+    </header>
+
+    <!-- Bus Routes Section -->
+    <section id="bus-routes">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Choose Your Route</h2>
+                <p>Select your preferred route from the available options below.</p>
+            </div>
+            <div class="row">
+                <!-- Example Bus Routes -->
+                <div class="col-md-4">
+                    <div class="route-card">
+                        <h3>New York to Washington</h3>
+                        <p><strong>Duration:</strong> 5 hours</p>
+                        <p><strong>Price:</strong> $50</p>
+                        <a href="#booking-form" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="route-card">
+                        <h3>Los Angeles to San Francisco</h3>
+                        <p><strong>Duration:</strong> 6 hours</p>
+                        <p><strong>Price:</strong> $60</p>
+                        <a href="#booking-form" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="route-card">
+                        <h3>Chicago to Detroit</h3>
+                        <p><strong>Duration:</strong> 4 hours</p>
+                        <p><strong>Price:</strong> $45</p>
+                        <a href="#booking-form" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking-form">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Book Your Bus Ticket</h2>
+                <p>Fill in the details below to reserve your seat.</p>
+            </div>
+            <form action="booking.php" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="route">Select Route</label>
+                        <select id="route" name="route" class="form-control" required>
+                            <option value="New York to Washington">New York to Washington</option>
+                            <option value="Los Angeles to San Francisco">Los Angeles to San Francisco</option>
+                            <option value="Chicago to Detroit">Chicago to Detroit</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="date">Select Date</label>
+                        <input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="passengers">Number of Passengers</label>
+                        <input type="number" id="passengers" name="passengers" class="form-control" min="1" required>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Call Section -->
+   

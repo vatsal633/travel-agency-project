@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    
+
 
     <!-- Favicons -->
     <link href="img/logo.ico" rel="icon">
@@ -48,114 +48,232 @@
                 <li><a href="room.html">Apartments</a></li>
                 <li><a href="amenities.html">Amenities</a></li>
                 <li><a href="booking.html">Booking</a></li>
-                <li><a href="register.html">Register</a></li> 
+                <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Train Ticket Booking Section Start -->
-<div id="train-booking" class="container">
-    <div class ="main container2">
-        <link rel="stylesheet" href="path/to/your/styles.css">
-
-    <div class="section-header">
-        <h2>Book Your Train Ticket</h2>
-        <p>Fill in your travel details to book your train ticket. Choose the source, destination, and travel date.</p>
-    </div>
 
 
-    <div class="row">
-        <!-- Train Booking Form -->
-        <div class="col-12 col-md-6">
-            <form action="train-booking-confirmation.html" method="POST" id="train-booking-form">
-                <div class="form-group">
-                    <label for="departure-date">Departure Date</label>
-                    <input type="text" class="form-control datetimepicker-input" id="departure-date" name="departure-date" placeholder="Select Departure Date" required>
+
+    <div class="bus-booking-section-main">
+        
+        <!-- Booking Form for Route Selection -->
+        <section id="booking-form">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Book Your Bus Ticket</h2>
+                    <p>Select your route, choose the date, and book your bus tickets online.</p>
+                </div>
+                <form action="confirm-booking.html" method="POST" class="black">
+                    <div class="row">
+                        <!-- Route Selection -->
+                        <div class="col-md-4">
+                            <label for="route">Select Route</label>
+                            <select id="route" name="route" class="form-control" required>
+                                <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                                <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                                <option value="DENPASAR">DENPASAR</option> <!--bali-->
+                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                                <option value="DABOLIM">DABOLIM</option> <!--GOA-->
+                                <option value="KHERIA">KHERIA</option> <!--TAJAMAHAL-->
+                                <option value="GENEVA">GENEVA</option> <!--SWITERLAND-->
+                                <option value="PARIS">PARIS</option> <!--PARIS-->
+                                <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                                <option value="DUBAI">DUBAI</option> <!--DUBAI-->
+                            </select>
+                        </div>
+
+                        <!-- Date Selection -->
+                        <div class="col-md-4">
+                            <label for="date">Select Date</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                        </div>
+
+                        <!-- Number of Passengers -->
+                        <div class="col-md-4">
+                            <label for="passengers">Number of Passengers</label>
+                            <input type="number" id="passengers" name="passengers" class="form-control" min="1"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- bus available -->
+        <section id="available-buses">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Available Buses for Your Route</h2>
+                    <p>Select a bus to continue with your booking.</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="source-station">Source Station</label>
-                    <input type="text" class="form-control" id="source-station" name="source-station" placeholder="Enter Source Station" required>
+                <div class="row">
+                    <!-- Bus Option 1 -->
+                    <div class="col-md-4">
+                        <div class="bus-card">
+                            <h3>Luxury Bus A</h3>
+                            <p><strong>Price:</strong> $60</p>
+                            <p><strong>Seats Available:</strong> 20</p>
+                            <p><strong>Facilities:</strong> Air-conditioned, WiFi, Charging Ports</p>
+                            <a href="book-bus.html" class="btn btn-primary">Select Bus</a>
+                        </div>
+                    </div>
+
+                    <!-- Bus Option 2 -->
+                    <div class="col-md-4">
+                        <div class="bus-card">
+                            <h3>Economy Bus B</h3>
+                            <p><strong>Price:</strong> $40</p>
+                            <p><strong>Seats Available:</strong> 30</p>
+                            <p><strong>Facilities:</strong> Standard Seats, Air-conditioning</p>
+                            <a href="book-bus.html" class="btn btn-primary">Select Bus</a>
+                        </div>
+                    </div>
+
+                    <!-- Bus Option 3 -->
+                    <div class="col-md-4">
+                        <div class="bus-card">
+                            <h3>Standard Bus C</h3>
+                            <p><strong>Price:</strong> $50</p>
+                            <p><strong>Seats Available:</strong> 25</p>
+                            <p><strong>Facilities:</strong> Air-conditioned</p>
+                            <a href="book-bus.html" class="btn btn-primary">Select Bus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- booking section start -->
+        <section id="booking-confirmation">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Booking Confirmation</h2>
+                    <p>Review your booking details before proceeding.</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="destination-station">Destination Station</label>
-                    <input type="text" class="form-control" id="destination-station" name="destination-station" placeholder="Enter Destination Station" required>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Booking Details</h3>
+                        <ul>
+                            <li><strong>Route:</strong> </li>
+                            <li><strong>Bus:</strong> </li>
+                            <li><strong>Date:</strong> </li>
+                            <li><strong>Passengers:</strong> </li>
+                            <li><strong>Total Price:</strong> </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>Passenger Details</h3>
+                        <form action="payment.html" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" id="phone" name="phone" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Confirm & Pay</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- booking section ends -->
+
+
+        <!-- payment section start -->
+        <section id="payment">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Payment</h2>
+                    <p>Complete your payment to finalize the booking.</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="train-class">Train Class</label>
-                    <select class="form-control" id="train-class" name="train-class" required>
-                        <option value="sleeper">Sleeper</option>
-                        <option value="3-tier">3-Tier AC</option>
-                        <option value="2-tier">2-Tier AC</option>
-                        <option value="1-tier">1-Tier AC</option>
-                    </select>
+                <!-- Payment Options -->
+                <form action="thank-you.html" method="POST">
+                    <div class="row">
+                        <!-- Payment Option: Credit Card -->
+                        <div class="col-md-4">
+                            <label for="credit-card">Credit Card</label>
+                            <input type="text" id="credit-card" name="credit-card" class="form-control"
+                                placeholder="Enter your credit card number" required>
+                            <small class="form-text text-muted">We accept Visa, MasterCard, and American
+                                Express.</small>
+                        </div>
+
+                        <!-- Payment Option: Paytm -->
+                        <div class="col-md-4">
+                            <label for="paytm">Paytm</label>
+                            <input type="text" id="paytm" name="paytm" class="form-control"
+                                placeholder="Enter your Paytm number" required>
+                            <small class="form-text text-muted">Use your Paytm mobile number to pay.</small>
+                        </div>
+
+                        <!-- Payment Option: Google Pay -->
+                        <div class="col-md-4">
+                            <label for="google-pay">Google Pay</label>
+                            <input type="text" id="google-pay" name="google-pay" class="form-control"
+                                placeholder="Enter your Google Pay number or UPI ID" required>
+                            <small class="form-text text-muted">Enter your Google Pay number or UPI ID.</small>
+                        </div>
+                    </div>
+
+                    <!-- Additional Payment Details -->
+                    <div class="form-group">
+                        <label for="amount">Amount to Pay</label>
+                        <input type="number" id="amount" name="amount" class="form-control" value=" " required>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-success">Pay Now</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- payment section ends -->
+
+
+
+        <!-- Call Section Start -->
+        <div id="call-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Click Below to Call Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque
+                        convallis,
+                        enim at venenatis tincidunt.
+                    </p>
                 </div>
-
-                <div class="form-group">
-                    <label for="passenger-name">Passenger Name</label>
-                    <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="tel:+12345678900">+1 234 567 8900</a>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="passenger-email">Email Address</label>
-                    <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="passenger-phone">Phone Number</label>
-                    <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Book Now</button>
-            </form>
-        </div>
-
-        <!-- Ticket Summary -->
-        <div class="col-12 col-md-6">
-            <div class="ticket-summary">
-                <h4>Your Ticket Summary</h4>
-                <p>Departure Date: <span id="summary-departure-date">-</span></p>
-                <p>Source Station: <span id="summary-source-station">-</span></p>
-                <p>Destination Station: <span id="summary-destination-station">-</span></p>
-                <p>Train Class: <span id="summary-train-class">-</span></p>
-                <p>Passenger: <span id="summary-passenger-name">-</span></p>
-                <hr>
-                <p><strong>Total Fare: <span id="total-fare">-</span></strong></p>
             </div>
         </div>
+        <!-- Call Section End -->
     </div>
-</div>
-</div>
-</body>
-<!-- Train Ticket Booking Section End -->
-
-   
-
-
-                   
-
-
-    <!-- Call Section Start -->
-    <div id="call-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Click Below to Call Us</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
-                    enim at venenatis tincidunt.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <a href="tel:+12345678900">+1 234 567 8900</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Call Section End -->
 
     <!-- Footer Section Start -->
     <div id="footer">

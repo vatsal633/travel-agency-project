@@ -55,90 +55,84 @@
         </nav>
     </header>
     <!-- Train Ticket Booking Section Start -->
-<div id="train-booking" class="container train-from text-white">
-    <div class ="main container2">
-        <link rel="stylesheet" href="path/to/your/styles.css">
-
-    <div class="section-header text-white">
-        <h2>Book Your Train Ticket</h2>
-        <p>Fill in your travel details to book your train ticket. Choose the source, destination, and travel date.</p>
-    </div>
-
-
-    <div class="row">
-        <!-- Train Booking Form -->
-        <div class="col-12 col-md-6">
-            <form action="train-booking-confirmation.html" method="POST" id="train-booking-form">
-                <div class="form-group">
-                    <label for="departure-date">Departure Date</label>
-                    <input type="text" class="form-control datetimepicker-input" id="departure-date" name="departure-date" placeholder="Select Departure Date" required>
+    <div id="train-booking" class="container train-from text-white">
+        <div class="container2">
+            <div class="section-header text-white">
+                <h2>Book Your Train Ticket</h2>
+                <p>Fill in your travel details to book your train ticket. Choose the source, destination, and travel date.</p>
+            </div>
+            <div class="row">
+                <!-- Train Booking Form -->
+                <div class="col-12 col-md-6">
+                    <form action="train-booking-confirmation.html" method="POST" id="train-booking-form">
+                        <div class="form-group">
+                            <label for="departure-date">Departure Date</label>
+                            <input type="text" class="form-control datetimepicker-input" id="departure-date" name="departure-date" placeholder="Select Departure Date" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="source-station">Source Station</label>
+                            <input type="text" class="form-control" id="source-station" name="source-station" placeholder="Enter Source Station" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="destination-station">Destination Station</label>
+                            <input type="text" class="form-control" id="destination-station" name="destination-station" placeholder="Enter Destination Station" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="train-class">Train Class</label>
+                            <select class="form-control" id="train-class" name="train-class" required>
+                                <option value="sleeper">Sleeper</option>
+                                <option value="3-tier">3-Tier AC</option>
+                                <option value="2-tier">2-Tier AC</option>
+                                <option value="1-tier">1-Tier AC</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="passenger-name">Passenger Name</label>
+                            <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="passenger-email">Email Address</label>
+                            <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="passenger-phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
+                        </div>
+        
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <label for="source-station">Source Station</label>
-                    <input type="text" class="form-control" id="source-station" name="source-station" placeholder="Enter Source Station" required>
+        
+                <!-- Ticket Summary -->
+                <div class="col-12 col-md-6">
+                    <div class="ticket-summary">
+                        <h4>Your Ticket Summary</h4>
+                        <p>Departure Date: <span id="summary-departure-date">-</span></p>
+                        <p>Source Station: <span id="summary-source-station">-</span></p>
+                        <p>Destination Station: <span id="summary-destination-station">-</span></p>
+                        <p>Train Class: <span id="summary-train-class">-</span></p>
+                        <p>Passenger: <span id="summary-passenger-name">-</span></p>
+                        <hr>
+                        <p><strong>Total Fare: <span id="total-fare">-</span></strong></p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="destination-station">Destination Station</label>
-                    <input type="text" class="form-control" id="destination-station" name="destination-station" placeholder="Enter Destination Station" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="train-class">Train Class</label>
-                    <select class="form-control" id="train-class" name="train-class" required>
-                        <option value="sleeper">Sleeper</option>
-                        <option value="3-tier">3-Tier AC</option>
-                        <option value="2-tier">2-Tier AC</option>
-                        <option value="1-tier">1-Tier AC</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="passenger-name">Passenger Name</label>
-                    <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="passenger-email">Email Address</label>
-                    <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="passenger-phone">Phone Number</label>
-                    <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Book Now</button>
-            </form>
-        </div>
-
-        <!-- Ticket Summary -->
-        <div class="col-12 col-md-6">
-            <div class="ticket-summary">
-                <h4>Your Ticket Summary</h4>
-                <p>Departure Date: <span id="summary-departure-date">-</span></p>
-                <p>Source Station: <span id="summary-source-station">-</span></p>
-                <p>Destination Station: <span id="summary-destination-station">-</span></p>
-                <p>Train Class: <span id="summary-train-class">-</span></p>
-                <p>Passenger: <span id="summary-passenger-name">-</span></p>
-                <hr>
-                <p><strong>Total Fare: <span id="total-fare">-</span></strong></p>
             </div>
         </div>
+        </div>
+        </body>
+        <!-- Train Ticket Booking Section End -->
+        
+    
+            <!-- The rest of your content here -->
+        </div>
     </div>
-</div>
-</div>
-</body>
-<!-- Train Ticket Booking Section End -->
-
-   
-
-
-                   
-
-
-    <!-- Call Section Start -->
+    
     <div id="call-us">
         <div class="container">
             <div class="section-header">

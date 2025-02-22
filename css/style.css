@@ -27,12 +27,61 @@
     justify-content: center;
 }
 
+
+
+
 .train-from{
-    background-image: url('../img/train.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; 
-}
+        position: relative;
+        height: 115vh; /* or your desired height */
+       max-width: 100%; 
+        background-image: url('../img/train.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+.train-from::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: inherit; /* Inherit background image from the parent */
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px); /* Apply the blur effect */
+        
+        z-index: 0; /* Place the pseudo-element behind the content */
+    }
+    .train-from .container2 {
+        position: relative;
+        z-index: 1; /* Keep text and content above the blurred background */
+        color: white; /* Text color (for readability) */
+    }
+    
+    .ticket-summary {
+        background-color:#76767661; /* Light background for visibility */
+        padding: 15px;
+        border-radius: 7px;
+        box-shadow: 0px 4px 10px rgba(192, 162, 162, 0.1); /* Subtle shadow */
+    }
+    
+    .ticket-summary h4 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .ticket-summary p {
+
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .ticket-summary hr {
+        margin: 15px 0;
+        border: 1px solid #ddd;
+    }
+    
 
 .hehe{
     flex-direction: column;
@@ -87,7 +136,7 @@ img {
     border-style: none;
     width: 75%;
 }
-* {
+
 
 
 
@@ -1730,3 +1779,140 @@ input::-ms-input-placeholder {
     margin: 0;
     font-size: 18px;
 }
+/* General Styles */
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #333;
+    
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header Section */
+
+
+/* Bus Routes Section */
+#bus-routes {
+    padding: 60px 0;
+    
+}
+
+.black{
+    background-color: black;
+}
+
+#bus-routes .route-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#bus-routes .route-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#bus-routes .route-card p {
+    font-size: 1.2em;
+}
+
+#bus-routes .route-card a {
+    text-decoration: none;
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+#bus-routes .route-card a:hover {
+    background-color: #0c5bb4;
+}
+
+
+/* bus section ends */
+
+/* Booking Form Section */
+#booking-form {
+    padding: 60px 0;
+}
+
+#booking-form .section-header h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#booking-form .section-header p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#booking-form form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#booking-form form label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+#booking-form form select, #booking-form form input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#booking-form form button {
+    background-color: #1a73e8;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bus-booking-section-main{
+    width: 67%;
+    margin: auto;
+    padding: 14px;
+    margin-top: 24px;
+    background-color: #0c0c0c;
+    margin-bottom: 24px;
+    border-radius: 15px;
+}
+
