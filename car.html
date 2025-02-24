@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LOFT CITY | Responsive Travel & Tourism Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicons -->
+        <link href="img/favicon.ico" rel="icon">
+        <link href="img/apple-favicon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <!-- Vendor CSS File -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="vendor/slick/slick.css" rel="stylesheet">
+        <link href="vendor/slick/slick-theme.css" rel="stylesheet">
+        <link href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+        <!-- Main Stylesheet File -->
+        <link href="css/hover-style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    
+        <!-- Header Section Start -->
+        <header id="header">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <div class="phone"><i class="fa fa-phone"></i>+1 234 567 8900</div>
+            <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+            <nav class="main-menu top-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="active"><a href="room.html">Apartments</a></li>
+                    <li><a href="amenities.html">Amenities</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="register.html">Register</a></li> 
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+    
+    
+     
+                <!-- Main Content -->
+                <div class="my-container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <h2 class="text-center" style="color: black;">BOOK YOUR CAB</h2>
+                            <form id="cab-booking-form" action="#" method="POST">
+                                <!-- First Row: Pick-Up and Drop-Off Locations, Date and Time -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                      <br> <label for="pickup-location" style="color: whitE;">Pick-Up Location</label>
+                                        <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter pick-up location" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                       <br> <label for="drop-location" style="color: whitE;">Drop-Off Location</label>
+                                       <select id="drop-location" name="drop-location" class="form-control" required>
+                                        <option value="" disabled selected>Destination Station</option>
+                                        <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                                        <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                                        <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                                        <option value="DENPASAR">DENPASAR</option> <!--bali-->
+                                        <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                                         <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                                         </select>
+                                     
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="pickup-time" style="color: whitE;">Pick-Up Time</label>
+                                        <input type="time" class="form-control datetimepicker" id="pickup-time" name="pickup-time" placeholder="Choose pick-up time" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="service-type" style="color: whitE;">Service Type</label>
+                                        <select class="form-control" id="service-type" name="service-type">
+                                            <option value="one-way">One-Way</option>
+                                            <option value="round-trip">Round-Trip</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <!-- Second Row: Vehicle, Passengers, Contact Number -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="vehicle-type" style="color: whitE;">Select Vehicle</label>
+                                        <select class="form-control" id="vehicle-type" name="vehicle-type">
+                                            <option value="sedan">Sedan</option>
+                                            <option value="suv">SUV</option>
+                                            <option value="minivan">Minivan</option>
+                                            <option value="luxury">Luxury</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="number-of-passengers" style="color: whitE;">Number of Passengers</label>
+                                        <input type="number" class="form-control" id="number-of-passengers" name="number-of-passengers" min="1" placeholder="Enter number of passengers" required>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="contact-number" style="color: whitE;">Contact Number</label>
+                                        <input type="tel" class="form-control" id="contact-number" name="contact-number" placeholder="Enter your contact number" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="driver-gender" style="color: whitE;">Preferred Driver Gender</label>
+                                        <select class="form-control" id="driver-gender" name="driver-gender">
+                                            <option value="any">Any</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <!-- Third Row: Payment Method, Luggage Space, Fuel Type -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="payment-method" style="color: whitE;">Payment Method</label>
+                                        <select class="form-control" id="payment-method" name="payment-method">
+                                            <option value="credit-card">Credit Card</option>
+                                            <option value="paypal">PayPal</option>
+                                            <option value="cash">Cash on Arrival</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="luggage-space" style="color: whitE;">Luggage Space</label>
+                                        <select class="form-control" id="luggage-space" name="luggage-space">
+                                            <option value="small">Small (1-2 bags)</option>
+                                            <option value="medium">Medium (3-4 bags)</option>
+                                            <option value="large">Large (5+ bags)</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="fuel-type" style="color: whitE;">Fuel Type</label>
+                                        <select class="form-control" id="fuel-type" name="fuel-type">
+                                            <option value="petrol">Petrol</option>
+                                            <option value="diesel">Diesel</option>
+                                            <option value="electric">Electric</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="car-preferences" style="color: whitE;">Car Preferences</label>
+                                        <select class="form-control" id="car-preferences" name="car-preferences">
+                                            <option value="smoking">Smoking Allowed</option>
+                                            <option value="no-smoking">Non-smoking</option>
+                                            <option value="child-seat">Child Seat Available</option>
+                                            <option value="pet-friendly">Pet Friendly</option>
+                                            <option value="sunroof">Sunroof</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <!-- Fare Estimator (Hidden Initially) -->
+                                <div class="form-group" id="fare-estimate" style="display: none;">
+                                    <label for="fare">Estimated Fare</label>
+                                    <input type="text" class="form-control" id="fare" name="fare" readonly>
+                                </div>
+                                <a href="ticketcab.html">
+                                <div class="book-now">
+                                    <button type="submit" class="btn btn-primary btn-block"><center>Book Now</center></button>
+                                    
+                                </div>
+</a>                                
+
+
+
+      </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </body>
+        </html>
+        
+
+
+
+
+            <div id="call-us">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Click Below to Call Us</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
+                            enim at venenatis tincidunt.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="tel:+12345678900">+1 234 567 8900</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Call Section End -->
+        
+            <!-- Footer Section Start -->
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="social">
+                                <a href="">
+                                    <li class="fa fa-instagram"></li>
+                                </a>
+                                <a href="">
+                                    <li class="fa fa-twitter"></li>
+                                </a>
+                                <a href="">
+                                    <li class="fa fa-facebook-f"></li>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Terms</a></li>
+                                <li><a href="">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
+                            <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Section End -->
+        
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+            <!-- Vendor JavaScript File -->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/jquery/jquery-migrate.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="vendor/easing/easing.min.js"></script>
+            <script src="vendor/stickyjs/sticky.js"></script>
+            <script src="vendor/superfish/hoverIntent.js"></script>
+            <script src="vendor/superfish/superfish.min.js"></script>
+            <script src="vendor/wow/wow.min.js"></script>
+            <script src="vendor/slick/slick.min.js"></script>
+            <script src="vendor/tempusdominus/js/moment.min.js"></script>
+            <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+            <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+            <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+        
+        
+            <!-- Booking Javascript File -->
+            <script src="js/booking.js"></script>
+            <script src="js/jqBootstrapValidation.min.js"></script>
+        
+            <!-- Main Javascript File -->
+            <script src="js/main.js"></script>
+        
+        

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tours & Travel Agency</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+
+    <!-- Favicons -->
+    <link href="img/logo.ico" rel="icon">
+    <link href="img/apple-favicon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Raleway:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <!-- Vendor CSS File -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/slick/slick.css" rel="stylesheet">
+    <link href="vendor/slick/slick-theme.css" rel="stylesheet">
+    <link href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Main Stylesheet File -->
+    <link href="css/hover-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header id="header">
+        <a href="index.html" class="text-light logo"><img src="./img/logo.png" alt=""></a>
+
+        <div class="phone"><i class="fa fa-phone"></i>+1 234 567 8900</div>
+        <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+        <nav class="main-menu top-menu">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About US</a></li>
+                <li><a href="room.html">Apartments</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Booking Form Section -->
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <form action="booking-confirmation.html" method="POST" class="booking-form">
+                    <h3><center style="color: white;">Book Your Stay</center></h3>
+                    <div class="row">
+                        <!-- Check-in Date -->
+                        <div class="col-md-4">
+                            <label for="checkin-date">Check-in Date</label>
+                            <input type="text" class="form-control datetimepicker-input" id="date-1"
+                            data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY"
+                            required="required" data-validation-required-message="Please enter date" />
+                        <p class="help-block text-danger"></p>
+                            
+                        </div>
+                        <!-- Check-out Date -->
+                        <div class="col-md-4">
+                            <label for="checkout-date">Check-out Date</label>
+                            <input type="text" class="form-control datetimepicker-input" id="date-2"
+                            data-toggle="datetimepicker" data-target="#date-2" placeholder="E.g. MM/DD/YYYY"
+                            required="required" data-validation-required-message="Please enter date" />
+                        <p class="help-block text-danger"></p>
+                        </div>
+                        <!-- Number of Guests -->
+                        <div class="col-md-4">
+                            <label>Adult</label>
+                            <select class="custom-select" id="adult" required="required"
+                                data-validation-required-message="Please select one" />
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+                   <center><div class="row">
+                        <!-- Room Type -->
+                        <div class="col-md-6">
+                         <label>KId</label>
+                    <select class="custom-select" id="kid" required="required"
+                        data-validation-required-message="Please select one" />
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    </select>
+                    <p class="help-block text-danger"></p>
+
+                    </div></div></center>
+
+                    <div class="row">
+                        <!-- Room Type -->
+                        <div class="col-md-6">
+                    <label>Email</label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="E.g. email@example.com" required="required"
+                                        data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                        <div class="row">
+                        <!-- Room Type -->
+                        <div class="col-md-6">
+                            <label for="room-type">Room Type</label>
+                            <select id="room-type" name="room-type" class="form-control" required>
+                                <option value="single">Single Room</option>
+                                <option value="double">Double Room</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </div>
+                        <!-- Special Requests -->
+                        <div class="col-md-6">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" name="special-requests" class="form-control"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+
+
+    
+                  <center>  <button type="submit" class="btn btn-primary"><a href="room.html">Book Now</a></button></center>
+                    <section id="confirmation" class="confirmation-section">
+                        <div class="container">
+                            <h2 style="color: white;"><center><br><br>Your Booking is Confirmed</center></h2>
+                            <p style="color: white;"><center>Thank you for booking with us. Here are your booking details:</center></p>
+                            <ul>
+                                <li><strong>Check-in Date:</strong> <span id="confirm-checkin"></span></li>
+                                <li><strong>Check-out Date:</strong> <span id="confirm-checkout"></span></li>
+                                <li><strong>Guests:</strong> <span id="confirm-guests"></span></li>
+                                <li><strong>Room Type:</strong> <span id="confirm-room-type"></span></li>
+                                <li><strong>Special Requests:</strong> <span id="confirm-special-requests"></span></li>
+                            </ul>
+                        </div>
+                    </section>
+                </form>
+                
+            </div>
+
+            <!-- Booking Confirmation Page -->
+            
+        </section>
+        <script>
+            // Example script to display confirmation data (using query string or session data)
+            document.getElementById('confirm-checkin').innerText = localStorage.getItem('checkin-date');
+            document.getElementById('confirm-checkout').innerText = localStorage.getItem('checkout-date');
+            document.getElementById('confirm-guests').innerText = localStorage.getItem('guests');
+            document.getElementById('confirm-room-type').innerText = localStorage.getItem('room-type');
+            document.getElementById('confirm-special-requests').innerText = localStorage.getItem('special-requests');
+        </script>
+
+        <!-- Footer Section Start -->
+        <div id="call-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Click Below to Call Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque
+                        convallis,
+                        enim at venenatis tincidunt.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="tel:+12345678900">+1 234 567 8900</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="social">
+                            <a href="">
+                                <li class="fa fa-instagram"></li>
+                            </a>
+                            <a href="">
+                                <li class="fa fa-twitter"></li>
+                            </a>
+                            <a href="">
+                                <li class="fa fa-facebook-f"></li>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Terms</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
+                        <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- Vendor JavaScript File -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/jquery/jquery-migrate.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/easing/easing.min.js"></script>
+        <script src="vendor/stickyjs/sticky.js"></script>
+        <script src="vendor/superfish/hoverIntent.js"></script>
+        <script src="vendor/superfish/superfish.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>
+        <script src="vendor/slick/slick.min.js"></script>
+        <script src="vendor/tempusdominus/js/moment.min.js"></script>
+        <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+
+        <!-- Booking Javascript File -->
+        <script src="js/booking.js"></script>
+        <script src="js/jqBootstrapValidation.min.js"></script>
+
+        <!-- Main Javascript File -->
+        <script src="js/main.js"></script>
+</body>
+
+</html>

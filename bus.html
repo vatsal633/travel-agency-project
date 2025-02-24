@@ -72,17 +72,14 @@
                         <div class="col-md-4">
                             <label for="route">Select Route</label>
                             <select id="route" name="route" class="form-control" required>
+                               
                                 <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                                <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                                <option value="DENPASAR">DENPASAR</option> <!--bali-->
-                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                                <option value="DABOLIM">DABOLIM</option> <!--GOA-->
-                                <option value="KHERIA">KHERIA</option> <!--TAJAMAHAL-->
-                                <option value="GENEVA">GENEVA</option> <!--SWITERLAND-->
-                                <option value="PARIS">PARIS</option> <!--PARIS-->
-                                <option value="VELANA">VELANA</option> <!--MALDIVES-->
-                                <option value="DUBAI">DUBAI</option> <!--DUBAI-->
+                                        <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                                        <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                                        <option value="DENPASAR">DENPASAR</option> <!--bali-->
+                                        <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                                         <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                                     
                             </select>
                         </div>
 
@@ -202,7 +199,8 @@
 
 
         <!-- payment section start -->
-        <section id="payment">
+       <br> <section id="payment">
+
             <div class="container">
                 <div class="section-header text-center">
                     <h2>Payment</h2>
@@ -210,52 +208,24 @@
                 </div>
 
                 <!-- Payment Options -->
-                <form action="thank-you.html" method="POST">
-                    <div class="row">
-                        <!-- Payment Option: Credit Card -->
-                        <div class="col-md-4">
-                            <label for="credit-card">Credit Card</label>
-                            <input type="text" id="credit-card" name="credit-card" class="form-control"
-                                placeholder="Enter your credit card number" required>
-                            <small class="form-text text-muted">We accept Visa, MasterCard, and American
-                                Express.</small>
-                        </div>
-
-                        <!-- Payment Option: Paytm -->
-                        <div class="col-md-4">
-                            <label for="paytm">Paytm</label>
-                            <input type="text" id="paytm" name="paytm" class="form-control"
-                                placeholder="Enter your Paytm number" required>
-                            <small class="form-text text-muted">Use your Paytm mobile number to pay.</small>
-                        </div>
-
-                        <!-- Payment Option: Google Pay -->
-                        <div class="col-md-4">
-                            <label for="google-pay">Google Pay</label>
-                            <input type="text" id="google-pay" name="google-pay" class="form-control"
-                                placeholder="Enter your Google Pay number or UPI ID" required>
-                            <small class="form-text text-muted">Enter your Google Pay number or UPI ID.</small>
-                        </div>
-                    </div>
-
-                    <!-- Additional Payment Details -->
-                    <div class="form-group">
-                        <label for="amount">Amount to Pay</label>
-                        <input type="number" id="amount" name="amount" class="form-control" value=" " required>
-                    </div>
-
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-success">Pay Now</button>
-                    </div>
-                </form>
-            </div>
+                <label for="payment-method" style="color: whitE;">Payment Method</label>
+                <select class="form-control" id="payment-method" name="payment-method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash on Arrival</option>
+                </select>
+                
         </section>
+
+
         <!-- payment section ends -->
 
 
 
         <!-- Call Section Start -->
-        <div id="call-us">
+      <br>  <div id="call-us">
+
+
             <div class="container">
                 <div class="section-header">
                     <h2>Click Below to Call Us</h2>
