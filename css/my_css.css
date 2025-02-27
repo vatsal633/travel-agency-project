@@ -144,3 +144,7 @@ button:hover {
     opacity: 1;
     bottom: 50px;
 }
+
+.white{
+    color: white;
+}

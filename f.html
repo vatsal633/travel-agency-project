@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Vendor JavaScript File -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery-migrate.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/easing/easing.min.js"></script>
+<script src="vendor/stickyjs/sticky.js"></script>
+<script src="vendor/superfish/hoverIntent.js"></script>
+<script src="vendor/superfish/superfish.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/tempusdominus/js/moment.min.js"></script>
+<script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+
+<!-- Booking Javascript File -->
+<script src="js/booking.js"></script>
+<script src="js/jqBootstrapValidation.min.js"></script>
+
+<!-- Main Javascript File -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
+<!-- Header Section Start -->
+<header id="header">
+    <a href="index.html" class="text-light logo"><img src="./img/logo.png" alt=""></a>
+
+    <div class="phone"><i class="fa fa-phone"></i>+1 234 567 8900</div>
+    <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
+    <nav class="main-menu top-menu">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About US</a></li>
+            <li><a href="room.html">Apartments</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tours & Travel Agency</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+
+    <!-- Favicons -->
+    <link href="img/logo.ico" rel="icon">
+    <link href="img/apple-favicon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Raleway:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <!-- Vendor CSS File -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/slick/slick.css" rel="stylesheet">
+    <link href="vendor/slick/slick-theme.css" rel="stylesheet">
+    <link href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Main Stylesheet File -->
+    <link href="css/hover-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/my_css.css" rel="stylesheet">
+
+</head>
+
+
+
+
+<!-- Header Section End -->
+
+<!-- Flight Search Section Start -->
+<section id="flight-search">
+    <div class="container-flight">
+        <div class="section-header">
+            <h2>Search Flights</h2>
+            <p>Find the best flights for your trip</p>
+        </div>
+        
+        <!-- Flight Search Form -->
+        <form action="search_results.html" method="GET">
+            <div class="row">
+
+                <!-- Column 1 -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" class="form-control" id="from" name="from" placeholder="Enter departure city" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <select class="form-control" id="to" name="to" required>
+                            <option value="" disabled selected>To</option>
+                            <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                            <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                            <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                            <option value="DENPASAR">DENPASAR</option> <!--bali-->
+                            <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                            <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departure-date">Departure Date</label>
+                        <input type="date" class="form-control" id="departure-date" name="departure-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return-date">Return Date</label>
+                        <input type="date" class="form-control" id="return-date" name="return-date">
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="passengers">Number of Passengers</label>
+                        <select class="form-control" id="passengers" name="passengers" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                            <option value="5">5 Adults</option>
+                        </select>
+                    </div>
+
+                    <div class="payment-options">
+                        <label for="payment"><h1>Payment:</h1></label>
+                        <label><input type="radio" name="payment" value="credit" required> Credit Card</label><br>
+                        <label><input type="radio" name="payment" value="paypal" required> PayPal</label><br>
+                        <label><input type="radio" name="payment" value="bank" required> Bank Transfer</label>
+                    </div>
+
+                    <div class="additional-services">
+                        <label for="additional-services"><h1>Services:</h1></label>
+                        <label><input type="checkbox" name="extra_luggage"> Extra Luggage</label><br>
+                        <label><input type="checkbox" name="meal"> In-Flight Meal</label><br>
+                        <label><input type="checkbox" name="window_seat"> Window Seat</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Additional Requests:</label>
+                        <textarea id="comments" name="comments" class="form-control" placeholder="Enter any special requests..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Search Flights</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+<div id="call-us">
+    <div class="container">
+        <div class="section-header">
+            <h2>Click Below to Call Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
+                enim at venenatis tincidunt.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="tel:+12345678900">+1 234 567 8900</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call Section End -->
+
+<!-- Footer Section Start -->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="social">
+                    <a href="">
+                        <li class="fa fa-instagram"></li>
+                    </a>
+                    <a href="">
+                        <li class="fa fa-twitter"></li>
+                    </a>
+                    <a href="">
+                        <li class="fa fa-facebook-f"></li>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
+                <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<footer class="new_footer">
+    &copy; 2025 Flight Free. All rights reserved.
+</footer>
+
+<!-- Footer Section End -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Vendor JavaScript File -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery-migrate.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/easing/easing.min.js"></script>
+<script src="vendor/stickyjs/sticky.js"></script>
+<script src="vendor/superfish/hoverIntent.js"></script>
+<script src="vendor/superfish/superfish.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/tempusdominus/js/moment.min.js"></script>
+<script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+
+<!-- Booking Javascript File -->
+<script src="js/booking.js"></script>
+<script src="js/jqBootstrapValidation.min.js"></script>
+
+<!-- Main Javascript File -->
+<script src="js/main.js"></script>
+<script src="js/myjs.js"></script>
