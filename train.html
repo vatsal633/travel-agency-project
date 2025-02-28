@@ -65,75 +65,104 @@
                 <!-- Train Booking Form -->
                 <div class="col-12 col-md-6">
                     <form action="train-booking-confirmation.html" method="POST" id="train-booking-form">
-                        <div class="form-group">
-                            <label for="departure-date"> Date</label>
-                            <input type="text" class="form-control datetimepicker-input" id="date-1"
-                            data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY"
-                            required="required" data-validation-required-message="Please enter date" />
-                        <p class="help-block text-danger"></p>
+                        
+                        <!-- Departure Date -->
+                        <div class="form-group row">
+                            <label for="departure-date" class="col-12 col-md-4 text-center">Date</label>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control datetimepicker-input" id="date-1"
+                                    data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY"
+                                    required="required" data-validation-required-message="Please enter date" />
+                                <p class="help-block text-danger"></p>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="source-station">Source Station</label>
-                            <select id="route" name="route" class="form-control" required>
-                                <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                             <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                                <option value="DENPASAR">DENPASAR</option> <!--bali-->
-                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                                <option value="DABOLIM">DABOLIM</option> <!--GOA-->
-                                <option value="KHERIA">KHERIA</option> <!--TAJAMAHAL-->
-                                <option value="GENEVA">GENEVA</option> <!--SWITERLAND-->
-                                <option value="PARIS">PARIS</option> <!--PARIS-->
-                                <option value="VELANA">VELANA</option> <!--MALDIVES-->
-                                <option value="DUBAI">DUBAI</option> <!--DUBAI-->
-                            </select>
+    
+                        <!-- Source Station -->
+                        <div class="form-group row">
+                            <label for="source-station" class="col-12 col-md-4 text-center">Source Station</label>
+                            <div class="col-12 col-md-8">
+                                
+                                <div class="white-box">
+                                    <select >
+                                    <label>FOR UDAIPUR:</label>
+                                    <label><input type="radio" name="states" value="Gujarat"> Gujarat</label>
+                                    <label><input type="radio" name="states" value="Madhya Pradesh"> Madhya Pradesh</label>
+                                    <label><input type="radio" name="states" value="Rajasthan"> Rajasthan</label>
+                                    <label><input type="radio" name="states" value="Delhi"> Delhi</label>
+                                    <label><input type="radio" name="states" value="Maharashtra"> Maharashtra</label>
+                                   
+
+                                   <br><label>FOR KULLU-MANALI:</label>
+                                    <label><input type="radio" name="states" value="Gujarat">Delhi</label>
+                                    <label><input type="radio" name="states" value="Madhya Pradesh"> punjab</label>
+                                    <label><input type="radio" name="states" value="Rajasthan"> Rajasthan</label>
+                                    <label><input type="radio" name="states" value="Delhi">Haryana</label>
+                                    <label><input type="radio" name="states" value="Maharashtra">Uttarakhand</label>
+                                   
+                                </div>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="destination-station">Destination Station</label>
-                            <select id="route" name="route" class="form-control" required>
-                                <option value="" disabled selected>Destination Station</option>
-                                <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                                <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                                <option value="DENPASAR">DENPASAR</option> <!--bali-->
-                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                                 <option value="VELANA">VELANA</option> <!--MALDIVES-->
-                             
-                            </select>
+    
+                        <!-- Destination Station -->
+                        <div class="form-group row">
+                            <label for="destination-station" class="col-12 col-md-4 text-center">Destination Station</label>
+                            <div class="col-12 col-md-8">
+                                <select id="route" name="route" class="form-control" required>
+                                    <option value="UDAIPUR">UDAIPUR</option>
+                                    <option value="JUBBARHATTI">JUBBARHATTI</option>
+                                    <option value="DENPASAR">DENPASAR</option>
+                                    <option value="KOCHI">KOCHI</option>
+                                    <option value="VELANA">VELANA</option>
+                                </select>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="train-class">Train Class</label>
-                            <select class="form-control" id="train-class" name="train-class" required>
-                                <option value="sleeper">Sleeper</option>
-                                <option value="3-tier">3-Tier AC</option>
-                                <option value="2-tier">2-Tier AC</option>
-                                <option value="1-tier">1-Tier AC</option>
-                            </select>
+    
+                        <!-- Train Class -->
+                        <div class="form-group row">
+                            <label for="train-class" class="col-12 col-md-4 text-center"><b>Train Class</b></label>
+                            <div class="col-12 col-md-8">
+                                <select class="form-control" id="train-class" name="train-class" required>
+                                    <option value="sleeper">Sleeper</option>
+                                    <option value="3-tier">3-Tier AC</option>
+                                    <option value="2-tier">2-Tier AC</option>
+                                    <option value="1-tier">1-Tier AC</option>
+                                </select>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="passenger-name">Passenger Name</label>
-                            <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
+    
+                        <!-- Passenger Name -->
+                        <div class="form-group row">
+                            <label for="passenger-name" class="col-12 col-md-4 text-center">Passenger Name</label>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="passenger-email">Email Address</label>
-                            <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
+    
+                        <!-- Passenger Email -->
+                        <div class="form-group row">
+                            <label for="passenger-email" class="col-12 col-md-4 text-center">Email Address</label>
+                            <div class="col-12 col-md-8">
+                                <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
+                            </div>
                         </div>
-        
-                        <div class="form-group">
-                            <label for="passenger-phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
+    
+                        <!-- Passenger Phone -->
+                        <div class="form-group row">
+                            <label for="passenger-phone" class="col-12 col-md-4 text-center">Phone Number</label>
+                            <div class="col-12 col-md-8">
+                                <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
+                            </div>
                         </div>
-        
-                        <button type="submit" class="btn btn-primary">Book Now</button>
+    
+                        <div class="form-group row">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
-        
-                <!-- Ticket Summary -->
+    
+                <!-- Ticket Summary (right side) -->
                 <div class="col-12 col-md-6">
                     <div class="ticket-summary">
                         <h4>Your Ticket Summary</h4>
@@ -148,8 +177,38 @@
                 </div>
             </div>
         </div>
-        </div>
-        </body>
+    </div>
+    
+    <!-- Add additional styles -->
+    <style>
+        .ticket-summary {
+            background-color: #ffffff1b;
+            padding: 20px;
+
+
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .ticket-summary h4 {
+            margin-bottom: 15px;
+        }
+    
+        .ticket-summary p {
+            margin-bottom: 10px;
+        }
+    
+        .white-box {
+            background-color: rgb(244, 239, 239);
+            color: black;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+    </style>
+    
         <!-- Train Ticket Booking Section End -->
         
     

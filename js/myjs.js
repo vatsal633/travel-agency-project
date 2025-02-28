@@ -56,3 +56,11 @@ function showToast() {
         toast.classList.remove("show");
     }, 3000); // Toast will disappear after 3 seconds
 }
+//bus//
+document.getElementById("route").addEventListener("change", function() {
+    var selectedOptions = this.selectedOptions;
+    if (selectedOptions.length > 3) {
+        alert("You can only select up to 3 routes!");
+        this.value = "";
+    }
+});

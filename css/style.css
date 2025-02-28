@@ -11,7 +11,8 @@
     display:flex;
     padding: 60px 0;
     background-image: url('../img/cab.jpg');
-    background-size: cover;
+    width: fit-content;
+    background-size: 200%;
     background-position: center;
     text-align: center;
     background-repeat: no-repeat;
@@ -31,7 +32,7 @@
     background-image: inherit; /* Inherit the background image */
     filter: blur(8px); /* Adjust the blur level */
     z-index: -1; /* Ensures the blur stays behind the content */
-    background-size: cover;
+    background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -83,7 +84,7 @@
 
 .train-from{
         position: relative;
-        height: 115vh; /* or your desired height */
+        height: 100% /* or your desired height */
        max-width: 100%; 
        
         background-image: url('../img/train.jpg');
@@ -100,6 +101,7 @@
         bottom: 0;
         background-image: inherit; /* Inherit background image from the parent */
         background-size: cover;
+
         background-position: center;
         filter: blur(2px); /* Apply the blur effect */
         
@@ -108,7 +110,7 @@
     .train-from .container2 {
         
         position: relative;
-        z-index: 1; /* Keep text and content above the blurred background */
+        z-index: 12; /* Keep text and content above the blurred background */
         color: white; /* Text color (for readability) */
     }
     
@@ -2202,5 +2204,27 @@ button.btn-primary {
 .main-container2{
     text-align: center;
     text:center;
-            ;
+    textbox: Center;
+            
+}
+/* train */
+#train-booking-form {
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Transparent border with slight opacity */
+    border-radius: 7px; /* Optional: to make corners rounded */
+    padding: px; /* Optional: add padding to give some space inside */
+    background-color: #76767661; /* Transparent background */
+    box-shadow: 0 4px 8px rgba(77, 67, 67, 0.2); /* Optional: add shadow for better visibility */
+    color:white;
+    text-align: center;
+    text-align: bold;
+}
+
+    }
+.form-group {
+    margin-bottom: 25px;
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text color */
 }
