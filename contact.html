@@ -53,8 +53,7 @@
                 <div class="section-header">
                     <h2>Contact</h2>
                     <p>
-                        Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query,
-                        <br> we’re here to assist you.
+                        "Get in touch with us to plan your next adventure! Reach us by phone, email, or through our contact form below."
                     </p>
                 </div>
                 <div class="row">
@@ -83,39 +82,62 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    
+                        <div  main-class="main-container2">
+                        <div class="col-md-12">
                         <div class="contact-form">
                             <div id="success"></div>
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Your Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="E.g. John Sina" required="required" data-validation-required-message="Please enter your name" />
+                                    <!-- First Column: Name -->
+                                    <div class="control-group col-md-12">
+                                       <center> <label>Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="E.g. John Sina" required="required" data-validation-required-message="Please enter your name" /></center>
                                         <p class="help-block text-danger"></p>
                                     </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="E.g. email@example.com" required="required" data-validation-required-message="Please enter your email" />
+                    
+                                 <!-- Second Column: Emai-->
+                                  
+                                  <div class="control-group col-md-12">
+                                 <center> <label>Email</label>
+                                 <input type="email" class="form-control" id="email" placeholder="E.g. email@example.com" required="required" data-validation-required-message="Please enter your email" /></center>
+                                  <p class="help-block text-danger"></p>
+                                     </div>
+
+                                    
+                                    
+                                </div>
+                    
+                                <!-- Second Row: Subject (Full Width) -->
+                                <div class="form-row">
+                                    <div class="control-group col-md-12">
+                                       <center> <label>Subject</label>
+                                        <input type="text" class="form-control" id="subject" placeholder="E.g. Room Booking" required="required" data-validation-required-message="Please enter a subject" /></center>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label>Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="E.g. Room Booking" required="required" data-validation-required-message="Please enter a subject" />
-                                    <p class="help-block text-danger"></p>
+                    
+                                <!-- Third Row: Message (Full Width) -->
+                                <div class="form-row">
+                                    <div class="control-group col-md-12">
+                                      <center>  <label>Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="E.g. I need a premium room" required="required" data-validation-required-message="Please enter your message"></textarea></center>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
                                 </div>
-                                <div class="control-group">
-                                    <label>Message</label> 
-                                    <textarea class="form-control" id="message" rows="5" placeholder="E.g. I need a premium room" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                    <p class="help-block text-danger"></p>
+                    
+                                <!-- Submit Button -->
+                                <center><div class="button">
+                                    <button type="submit" id="sendMessageButton">Send Message</button>
+                                
+                                </div></center>
+
                                 </div>
-                                <div class="button"><button type="submit" id="sendMessageButton">Send Message</button></div>
                             </form>
                         </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    
         <!-- Contact Section End -->
         <div id="call-us">
             <div class="container">
