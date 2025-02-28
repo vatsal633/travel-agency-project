@@ -28,8 +28,6 @@ let btn = document.getElementById("confirmBtn").onclick=()=>{
     }, 3000); // Hide after 3 seconds
 }  
 
-
-<script>
 function showToast() {
   // Display the toast
   const toast = document.getElementById('toast');
@@ -40,7 +38,6 @@ function showToast() {
     toast.style.display = 'none';
   }, 3000);
 }
-</script>
 
 
 

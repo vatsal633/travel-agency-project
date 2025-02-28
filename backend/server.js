@@ -6,15 +6,17 @@ import 'dotenv/config'
 const app = express()
 const port = process.env.port || 3000 
 
-app.use(cors)
+app.use(cors())
 app.use('/api/auth',userAuthroute)
+app.use(express.json())
 
 //connecting to database
 
-mongoose.connect(process.env.MONGO_URI,'mongodb://localhost:27017/login',{
+mongoose.connect(process.env.MONGO_URI, 'mongodb://localhost:27017/login', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
+
 .then(() => console.log(' Database connected'))
 .catch((err) => console.error(' Error connecting to database:', err))
 
