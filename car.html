@@ -54,41 +54,67 @@
 
 
 <!-- Main Content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Booking Form</title>
+    <!-- Include Bootstrap CSS for grid system -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styling for the labels and form elements */
+        label {
+            color: white;
+        }
+        .my-container {
+            background-color: #333;
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
 <div class="my-container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2 class="text-center" style="color: black;">BOOK YOUR CAB</h2>
+            <h2 class="text-center" style="color: black"><B> BOOK YOUR CAB</B></h2>
             <form id="cab-booking-form" action="#" method="POST">
                 <!-- First Row: Pick-Up and Drop-Off Locations, Date and Time -->
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <br> <label for="pickup-location" style="color: whitE;">Pick-Up Location</label>
-                        <input type="text" class="form-control" id="pickup-location" name="pickup-location"
-                            placeholder="Enter pick-up location" required>
+                        <label for="pickup-location">Pick-Up Location</label>
+                        <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter pick-up location" required>
                     </div>
                     <div class="col-md-6 form-group">
-                        <br> <label for="drop-location" style="color: whitE;">Drop-Off Location</label>
+                        <label for="drop-location">Drop-Off Location</label>
                         <select id="drop-location" name="drop-location" class="form-control" required>
                             <option value="" disabled selected>Destination Station</option>
-                            <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                            <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                            <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                            <option value="DENPASAR">DENPASAR</option> <!--bali-->
-                            <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                            <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                            <option value="UDAIPUR">UDAIPUR</option>
+                            <option value="KULLU-MANALI">KULLU-MANALI</option>
+                            <option value="JUBBARHATTI">JUBBARHATTI</option>
+                            <option value="DENPASAR">DENPASAR</option>
+                            <option value="KOCHI">KOCHI</option>
+                            <option value="VELANA">VELANA</option>
                         </select>
-
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="pickup-time" style="color: whitE;">Pick-Up Time</label>
-                        <input type="time" class="form-control datetimepicker" id="pickup-time" name="pickup-time"
-                            placeholder="Choose pick-up time" required>
+                        <label for="pickup-time">Pick-Up Time</label>
+                        <input type="time" class="form-control" id="pickup-time" name="pickup-time" placeholder="Choose pick-up time" required>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="service-type" style="color: whitE;">Service Type</label>
+                        <label for="service-type">Service Type</label>
                         <select class="form-control" id="service-type" name="service-type">
                             <option value="one-way">One-Way</option>
                             <option value="round-trip">Round-Trip</option>
@@ -99,7 +125,7 @@
                 <!-- Second Row: Vehicle, Passengers, Contact Number -->
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="vehicle-type" style="color: whitE;">Select Vehicle</label>
+                        <label for="vehicle-type">Select Vehicle</label>
                         <select class="form-control" id="vehicle-type" name="vehicle-type">
                             <option value="sedan">Sedan</option>
                             <option value="suv">SUV</option>
@@ -108,20 +134,18 @@
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="number-of-passengers" style="color: whitE;">Number of Passengers</label>
-                        <input type="number" class="form-control" id="number-of-passengers" name="number-of-passengers"
-                            min="1" placeholder="Enter number of passengers" required>
+                        <label for="number-of-passengers">Number of Passengers</label>
+                        <input type="number" class="form-control" id="number-of-passengers" name="number-of-passengers" min="1" placeholder="Enter number of passengers" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="contact-number" style="color: whitE;">Contact Number</label>
-                        <input type="tel" class="form-control" id="contact-number" name="contact-number"
-                            placeholder="Enter your contact number" required>
+                        <label for="contact-number">Contact Number</label>
+                        <input type="tel" class="form-control" id="contact-number" name="contact-number" placeholder="Enter your contact number" required>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="driver-gender" style="color: whitE;">Preferred Driver Gender</label>
+                        <label for="driver-gender">Preferred Driver Gender</label>
                         <select class="form-control" id="driver-gender" name="driver-gender">
                             <option value="any">Any</option>
                             <option value="male">Male</option>
@@ -133,7 +157,7 @@
                 <!-- Third Row: Payment Method, Luggage Space, Fuel Type -->
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="payment-method" style="color: whitE;">Payment Method</label>
+                        <label for="payment-method">Payment Method</label>
                         <select class="form-control" id="payment-method" name="payment-method">
                             <option value="credit-card">Credit Card</option>
                             <option value="paypal">PayPal</option>
@@ -141,7 +165,7 @@
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="luggage-space" style="color: whitE;">Luggage Space</label>
+                        <label for="luggage-space">Luggage Space</label>
                         <select class="form-control" id="luggage-space" name="luggage-space">
                             <option value="small">Small (1-2 bags)</option>
                             <option value="medium">Medium (3-4 bags)</option>
@@ -152,7 +176,7 @@
 
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="fuel-type" style="color: whitE;">Fuel Type</label>
+                        <label for="fuel-type">Fuel Type</label>
                         <select class="form-control" id="fuel-type" name="fuel-type">
                             <option value="petrol">Petrol</option>
                             <option value="diesel">Diesel</option>
@@ -160,7 +184,7 @@
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="car-preferences" style="color: whitE;">Car Preferences</label>
+                        <label for="car-preferences">Car Preferences</label>
                         <select class="form-control" id="car-preferences" name="car-preferences">
                             <option value="smoking">Smoking Allowed</option>
                             <option value="no-smoking">Non-smoking</option>
@@ -176,26 +200,25 @@
                     <label for="fare">Estimated Fare</label>
                     <input type="text" class="form-control" id="fare" name="fare" readonly>
                 </div>
-                <div class="book-now">
-                    <a href="ticketcab.html">
-                        <button type="submit" class="btn btn-primary btn-block" onclick="navigate()">
-                            <center>Book Now</center>
-                        </button>
-                    </a>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Book Now
+                    </button>
                 </div>
-                </a>
-
-
-
             </form>
         </div>
     </div>
 </div>
-</div>
+
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
+
 
 
 
@@ -206,8 +229,7 @@
         <div class="section-header">
             <h2>Click Below to Call Us</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
-                enim at venenatis tincidunt.
+                Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, we’re here to assist you—call us today!
             </p>
         </div>
         <div class="row">
@@ -238,16 +260,13 @@
             </div>
             <div class="col-12">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Terms</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-12">
-                <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
-                <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
-            </div>
+         
         </div>
     </div>
 </div>

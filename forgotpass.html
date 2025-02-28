@@ -79,127 +79,72 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/my_css.css" rel="stylesheet">
 
+
 </head>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
-    <link rel="stylesheet" href="booking.css">
-</head>
-
-<body>
-    <section class="booking">
-        <h1>
-            <center>Explore the world<br>Book Your Flight with Us Today!</center>
-        </h1>
-        <p>
-            <center>
-                Find the best flights to your destination
-            </center>
-            .
-        </p>
-        <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <div class="trip-type">
-                <label>
-                    <input type="radio" name=" triptype" value="return" required>return
-                </label>
-                <label>
-                    <input type="radio" name=" triptype" value="oneway" required>oneway
-                </label>
-
-                <b>
-                    <br <div class=" input-group hehe">
-                    <div class="input-wrapper">
-                        <labe><b>Departure</B></label>
-
-                            <br> <label for="Takeoff">Takeoff</label>
-                            <input type="text" id="Takeoff" name="Takeoff" required>
-
-
-
-
+    <body>
+    
+        <!-- Forgot Password Section Start -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card mt-5">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Forgot Your Password?</h3>
+                            <p class="text-center">Enter your username and email address below, and we will send you a reset link.</p>
                             
+                            <!-- Success and Failure Feedback -->
+                            <div id="feedbackMessage" class="alert alert-danger" style="display: none;"></div>
+    
+                            <form id="forgotPasswordForm" method="POST">
+                                <center>
+                                <div class="form-group">
+                                    
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                               </center>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary btn-block" id="submitBtn">Send code</button>
+                                </div>
+    
+                                <div class="text-center mt-3">
+                                    <a href="login.html">Back to Login</a>
+                                </div>
+                            </form>
+    
+    
+                            <!-- Loading Spinner -->
+                            <div id="loadingSpinner" class="text-center" style="display: none;">
+                                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                <p>Sending reset link...</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <br>
-                    <div class=" input-group" id="">
-                        <div class="input-wrapper" id="Arrival-area">
-                            <select id="Arrival" required>
-                                <option value="" disabled selected>Arrival</option>
-                                <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                                <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                                <option value="DENPASAR">DENPASAR</option> <!--bali-->
-                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                                <option value="VELANA">VELANA</option> <!--MALDIVES-->
-
-                            </select>
-                        </div>
-
-
-
-                        <br>
-                        <br>
-                        <div class="date-time">
-
-                            <div>
-                                <br>
-                                <label for="date"><br><br>Departure Date:</label>
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                            <div>
-                                <br>
-                                <label for="time"><br><br>Departure Time:</label>
-                                <input type="time" id="time" name="time" required>
-                            </div>
-                            <div>
-
-                                <label for="seats"><br><br><br>Number of Seats:</label>
-                                <input type="number" id="seats" name="seats" min="1" required>
-                            </div>
-                        </div>
-                        <br>
-
-
-                        <div class="payment-options">
-                            <label><input type="radio" name="payment" value="credit" required> Credit Card</label>
-                            <br>
-                            <label><input type="radio" name="payment" value="paypal" required>Paytam</label>
-                            <label><input type="radio" name="payment" value="bank" required> Bank Transfer</label>
-                        </div>
-
-                        <div class="additional-services">
-                            <label><input type="checkbox" name="extra_luggage"> Extra Luggage</label>
-                            <label><input type="checkbox" name="meal"> In-Flight Meal</label>
-                            <label><input type="checkbox" name="window_seat"> Window Seat</label>
-                        </div>
-
-                        <label for="comments"><br>Additional Requests:</label>
-                        <textarea id="comments" name="comments" placeholder="Enter any special requests..."></textarea>
-
-                        <!-- //Toast -->
-                        <input type="button" class="btn btn-primary" id="confirmBtn" onclick="showToast()">Confirm</input>
-                        <div id="toast" class="toast" style="display: none;">Confirmation Successful!</div>
-                        
-                       
-                        
-                        <!-- //toast -->
-        </form>
-    </section>
-</body>
-
-</html>
-
+                </div>
+            </div>
+        </div>
+        <!-- Forgot Password Section End -->
+    
+        <!-- Vendor JavaScript Files -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/sweetalert2/sweetalert2.min.js"></script>
+    
+        <!-- EmailJS SDK -->
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+        <!-- Main Javascript File -->
+        <script src="js/main.js"></script>
+    
+       
+    </body>
+    </html>
+    
 
 
 
@@ -210,8 +155,7 @@
         <div class="section-header">
             <h2>Click Below to Call Us</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
-                enim at venenatis tincidunt.
+                Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, we’re here to assist you—call us today!
             </p>
         </div>
         <div class="row">
@@ -242,24 +186,18 @@
             </div>
             <div class="col-12">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Terms</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-12">
-                <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
-                <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
-            </div>
+          
         </div>
     </div>
 </div> -->
 
 
-<footer class="new_footer">
-    &copy; 2025 Flight Free. All rights reserved.
-</footer>
 
 <!-- Footer Section End -->
 

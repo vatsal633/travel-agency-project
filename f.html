@@ -79,6 +79,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/my_css.css" rel="stylesheet">
 
+
 </head>
 
 
@@ -87,19 +88,22 @@
 <!-- Header Section End -->
 
 <!-- Flight Search Section Start -->
-<section id="flight-search">
-    <div class="container-flight">
+<section id="">
+    <div class="container-flight flight-search">
         <div class="section-header">
-            <h2>Search Flights</h2>
-            <p>Find the best flights for your trip</p>
+            <h2><B>Search Flights</B></h2>
+            <p><B>Find the best flights for your trip</B></p>
         </div>
         
         <!-- Flight Search Form -->
-        <form action="search_results.html" method="GET">
+        <div class="form-wrapper">
+       
+            
             <div class="row">
 
                 <!-- Column 1 -->
                 <div class="col-md-6">
+                    
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
@@ -166,10 +170,19 @@
                         <textarea id="comments" name="comments" class="form-control" placeholder="Enter any special requests..."></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Search Flights</button>
-                    </div>
+                   <!-- Toast Notification Element -->
+<div id="toast" class="toast">
+    <p>Flight booked successfully!</p>
+</div>
+
+<!-- Form with Button -->
+<div class="form-group">
+    <button type="submit" class="btn btn-primary btn-block "onclick="showToast()">Book Now</button>
+</div>
+
                 </div>
+                </div>
+                
 
             </div>
         </form>
@@ -181,8 +194,7 @@
         <div class="section-header">
             <h2>Click Below to Call Us</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis,
-                enim at venenatis tincidunt.
+                Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, we’re here to assist you—call us today!
             </p>
         </div>
         <div class="row">
@@ -213,16 +225,13 @@
             </div>
             <div class="col-12">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Terms</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-12">
-                <p>Copyright &#169; <a href="https://htmlcodex.com">HTML Codex</a> All Rights Reserved.</p>
-                <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
-            </div>
+           
         </div>
     </div>
 </div> -->

@@ -41,3 +41,18 @@ function showToast() {
   }, 3000);
 }
 </script>
+
+
+
+
+/*toast*/
+// Function to show the toast notification
+function showToast() {
+    var toast = document.getElementById("toast");
+    toast.classList.add("show"); // Add the 'show' class to display the toast
+
+    // After 3 seconds, remove the 'show' class to hide the toast
+    setTimeout(function() {
+        toast.classList.remove("show");
+    }, 3000); // Toast will disappear after 3 seconds
+}
