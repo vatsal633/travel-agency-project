@@ -81,91 +81,113 @@
 
 
 </head>
-    <body>
-    
-        <!-- Forgot Password Section Start -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card mt-5">
-                        <div class="card-body">
-                            <h3 class="card-title text-center">Forgot Your Password?</h3>
-                            <p class="text-center">Enter your username and email address below, and we will send you a reset link.</p>
-                            
-                            <!-- Success and Failure Feedback -->
-                            <div id="feedbackMessage" class="alert alert-danger" style="display: none;"></div>
-    
-                            <form id="forgotPasswordForm" method="POST">
-                                <center>
-                                <div class="form-group">
-                                    
+
+<body>
+
+    <!-- Forgot Password Section Start -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Forgot Your Password?</h3>
+                        <p class="text-center">Enter your username and email address below, and we will send you a reset
+                            link.</p>
+
+                        <!-- Success and Failure Feedback -->
+                        <div id="feedbackMessage" class="alert alert-danger" style="display: none;"></div>
+
+                        <form id="forgotPasswordForm" method="POST">
+                            <center>
+
+                                <div class="form-group" id="codesubmitDiv">
+
+                                    <label for="username"></label>
+                                    <input type="text" class="form-control" id="CodeSubmitInput" name="username"
+                                        placeholder="Enter Code here" required>
+                                </div>
+
+
+                                <div class="form-group" id="usernameDiv">
+
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                                    <input type="text" class="form-control" id="username" name="username"
+                                        placeholder="Enter your username" required>
                                 </div>
-    
-                                <div class="form-group">
+
+                                <div class="form-group " id="emailDiv">
                                     <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Enter your email" required>
                                 </div>
-                               </center>
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-primary btn-block" id="submitBtn">Send code</button>
-                                </div>
-    
-                                <div class="text-center mt-3">
-                                    <a href="login.html">Back to Login</a>
-                                </div>
-                            </form>
-    
-    
-                            <!-- Loading Spinner -->
-                            <div id="loadingSpinner" class="text-center" style="display: none;">
-                                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-                                <p>Sending reset link...</p>
+                            </center>
+
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-block" id="sendCodebtn" onclick=sendcode()>Send
+                                    code</button>
                             </div>
+
+                            <div id="submitbtndiv">
+
+
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <a href="login.html">Back to Login</a>
+                            </div>
+                        </form>
+
+
+                        <!-- Loading Spinner -->
+                        <div id="loadingSpinner" class="text-center" style="display: none;">
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                            <p>Sending reset link...</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Forgot Password Section End -->
-    
-        <!-- Vendor JavaScript Files -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="vendor/sweetalert2/sweetalert2.min.js"></script>
-    
-        <!-- EmailJS SDK -->
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    
-        <!-- Main Javascript File -->
-        <script src="js/main.js"></script>
-    
-       
-    </body>
-    </html>
-    
+    </div>
+    <!-- Forgot Password Section End -->
+
+    <!-- Vendor JavaScript Files -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Main Javascript File -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
 
 
 
 
 
-    <div id="call-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Click Below to Call Us</h2>
-                <p>
-                    Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, 
-                    <br>we’re here to assist you.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <a href="tel:+12345678900">+1 234 567 8900</a>
-                </div>
+
+<div id="call-us">
+    <div class="container">
+        <div class="section-header">
+            <h2>Click Below to Call Us</h2>
+            <p>
+                Call us today to start planning your dream vacation! Our team is ready to help with personalized
+                itineraries and exclusive deals.For any query,
+                <br>we’re here to assist you.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="tel:+12345678900">+1 234 567 8900</a>
             </div>
         </div>
     </div>
+</div>
 <!-- Call Section End -->
 
 <!-- Footer Section Start -->
@@ -189,11 +211,11 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-          
+
         </div>
     </div>
 </div> -->
@@ -227,3 +249,4 @@
 <!-- Main Javascript File -->
 <script src="js/main.js"></script>
 <script src="js/myjs.js"></script>
+<script src="js/userAuth.js"></script>
