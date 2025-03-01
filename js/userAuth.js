@@ -49,10 +49,7 @@ document.getElementById('sendCodebtn').onclick = () => {
     }
 
 }
-
-
-
-
+// function to match the code
 const matchcode = () => {
     let enteredcode = CodeSubmitInput.value
     console.log(enteredcode)
@@ -63,3 +60,4 @@ const matchcode = () => {
         alert('Code did not match')
     }
 }
+
