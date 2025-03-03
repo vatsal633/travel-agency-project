@@ -5,7 +5,7 @@ let repass = document.getElementById('repass');
 let register_btn = document.getElementById('register_btn');
 
 
-register_btn.addEventListener('click',function(){
+register_btn.addEventListener('click',async function(){
     if(username.value == '' || email.value == '' || password.value == '' || repass.value == ''){
         alert('Please fill all the fields');
     }else{
@@ -19,6 +19,21 @@ register_btn.addEventListener('click',function(){
             }
 
 
+            //post api for storing the data
+            try{
+                const response = await fetch('http://localhost:8080/api/auth/register',{
+                    method:"POST",
+                    headers:{
+                        "Content-type":"application/json"
+                    },
+                    body:JSON.stringify(data)
+                })
+            }catch(err){
+                console.log('fasing some issue while saving the data',err)
+            }
+
+
+            //saving info in local storage
             localStorage.setItem(data.username,JSON.stringify(data));
             alert('User data saved successfully!');
             console.log('Saved User:', data); // Debugging output

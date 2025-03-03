@@ -2,11 +2,11 @@ import mongoose from "mongoose";
 
 
 const loginschema = mongoose.Schema({
-    name:String,
+    username:String,
     email:String,
     password:String,
 })
 
-const Login = mongoose.model('Login', loginschema, 'logins'); // Force 'logins'
+const Login = mongoose.model('datas', loginschema) // Force 'logins'
 
 export default Login;
