@@ -32,6 +32,46 @@
     <link href="css/hover-style.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Define sub-options for each route
+            const subRoutes = {
+                "UDAIPUR": ["City Palace", "Lake Pichola", "Fateh Sagar Lake"],
+                "JUBBARHATTI": ["Shimla Airport", "Mall Road", "Kufri"],
+                "gujrat": ["Ahmedabad", "Surat", "Vadodara"],
+                "DENPASAR": ["Kuta Beach", "Ubud", "Tanah Lot"],
+                "KOCHI": ["Fort Kochi", "Marine Drive", "Lulu Mall"],
+                "VELANA": ["Male City", "Hulhumale", "Maafushi"]
+            };
+
+            const routeDropdown = document.getElementById("route");
+            const subRouteDropdown = document.getElementById("sub-route");
+
+            routeDropdown.addEventListener("change", function () {
+                const selectedRoute = this.value;
+                const subOptions = subRoutes[selectedRoute] || [];
+
+                // Clear previous options
+                subRouteDropdown.innerHTML = "";
+
+                // Add default option
+                const defaultOption = document.createElement("option");
+                defaultOption.textContent = "Select Sub Destination";
+                defaultOption.value = "";
+                subRouteDropdown.appendChild(defaultOption);
+
+                // Add new options based on selection
+                subOptions.forEach(function (sub) {
+                    const option = document.createElement("option");
+                    option.textContent = sub;
+                    option.value = sub;
+                    subRouteDropdown.appendChild(option);
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -79,27 +119,16 @@
     
                         <!-- Source Station -->
                         <div class="form-group row">
-                            <label for="source-station" class="col-12 col-md-4 text-center">Source Station</label>
+                            <label for="destination-station" class="col-12 col-md-4 text-center">Destination Station</label>
                             <div class="col-12 col-md-8">
-                                
-                                <div class="white-box">
-                                    <select >
-                                    <label>FOR UDAIPUR:</label>
-                                    <label><input type="radio" name="states" value="Gujarat"> Gujarat</label>
-                                    <label><input type="radio" name="states" value="Madhya Pradesh"> Madhya Pradesh</label>
-                                    <label><input type="radio" name="states" value="Rajasthan"> Rajasthan</label>
-                                    <label><input type="radio" name="states" value="Delhi"> Delhi</label>
-                                    <label><input type="radio" name="states" value="Maharashtra"> Maharashtra</label>
-                                   
-
-                                   <br><label>FOR KULLU-MANALI:</label>
-                                    <label><input type="radio" name="states" value="Gujarat">Delhi</label>
-                                    <label><input type="radio" name="states" value="Madhya Pradesh"> punjab</label>
-                                    <label><input type="radio" name="states" value="Rajasthan"> Rajasthan</label>
-                                    <label><input type="radio" name="states" value="Delhi">Haryana</label>
-                                    <label><input type="radio" name="states" value="Maharashtra">Uttarakhand</label>
-                                   
-                                </div>
+                                <select id="route" name="route" class="form-control" required>
+                                    <option value="UDAIPUR">UDAIPUR</option>
+                                    <option value="JUBBARHATTI"></option>
+                                    <option value="gujrat">gujrat</option>
+                                    <option value="DENPASAR">DENPASAR</option>
+                                    <option value="KOCHI">KOCHI</option>
+                                    <option value="VELANA">VELANA</option>
+                                </select>
                             </div>
                         </div>
     
