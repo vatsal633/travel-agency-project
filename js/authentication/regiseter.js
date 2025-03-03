@@ -3,6 +3,7 @@ let email = document.getElementById('email');
 let password = document.getElementById('password');
 let repass = document.getElementById('repass');
 let register_btn = document.getElementById('register_btn');
+let errorms = document.getElementById('error-msg')
 
 
 register_btn.addEventListener('click',async function(){
@@ -30,12 +31,13 @@ register_btn.addEventListener('click',async function(){
                 })
             }catch(err){
                 console.log('fasing some issue while saving the data',err)
+                errorms.innerHTML = err
             }
 
 
             //saving info in local storage
             localStorage.setItem(data.username,JSON.stringify(data));
-            alert('User data saved successfully!');
+            // alert('User data saved successfully!');
             console.log('Saved User:', data); // Debugging output
             
 

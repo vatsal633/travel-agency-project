@@ -1,4 +1,6 @@
 import { json } from "body-parser";
+import e from "express";
+import { resolve } from "path";
 
 let email = document.getElementById('email');
 let password = document.getElementById('password');
@@ -12,14 +14,26 @@ loginbtn.addEventListener('click', async function(event) {
     } else {
 
         //making the api for store data in db
+        try{
 
-        const response = await fetch('http://localhost:8080/api/auth/register',{
-            method:"POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body:JSON.stringify({email,password})
-        })
+            const response = await fetch('http://localhost:8080/api/auth/login',{
+                method:"POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify({email,password})
+            })
+
+            if(response.status(404)){
+                console.log('user not found or something else')
+            }
+
+            if(response.status(202)){
+
+            }
+        }catch(err){
+            console.log("error while login")
+        }   
 
 
 

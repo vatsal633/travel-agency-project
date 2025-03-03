@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-//get req for login
+//get req for register
 router.post('/register', async (req, res) => {
     try{    
         const {username,email,password} = req.body
@@ -17,6 +17,28 @@ router.post('/register', async (req, res) => {
         console.log("error while storing the data",error)
         res.status(500).json({ error: error.message });
     }
+})
+
+//post request for login 
+router.post('/login',async (req,res)=>{
+    try{
+
+        const {email,password} = req.body;
+        
+        const user = Data.findOne({email})
+        console.log(user)
+        
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.status(200).json({ message: "Login successful", user });
+    } catch (error) {
+        console.error("Error during login:", error);
+        res.status(500).json({ error: error.message });
+    }
+
+    console.log(user)
 })
 
 
