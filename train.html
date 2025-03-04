@@ -120,12 +120,13 @@
                         <!-- Source Station -->
                         <div class="form-group row">
                             <div class="select-container">
-                                <label for="location"class="col-12 col-md-4 text-center">loaction</label>
-                            
+                                <label for="location" class="col-12 col-md-4 text-center">Location</label>
+                        
                                 <select id="location" name="location" onchange="updateStates()">
                                     <option value="">--Select Location--</option>
                                     <option value="Udaipur">Udaipur</option>
                                     <option value="Kullu-Manali">Kullu-Manali</option>
+                                    <option value="JUBBARHATTI">JUBBARHATTI</option> <!-- SHIMLA -->
                                     <option value="Kochi">Kochi</option>
                                 </select>
                             </div>
@@ -155,7 +156,9 @@
                                 } else if (location === "Kullu-Manali") {
                                     states = ["Delhi", "Punjab", "Haryana", "Uttarakhand", "Rajasthan"];
                                 } else if (location === "Kochi") {
-                                    states = ["Kerala", "Tamil Nadu", "Karnataka", "Andhra Pradesh", "Goa","Maharastra"];
+                                    states = ["Kerala", "Tamil Nadu", "Karnataka", "Andhra Pradesh", "Goa", "Maharashtra"];
+                                } else if (location === "JUBBARHATTI") {
+                                    states = ["Haryana", "Himachal Pradesh"];
                                 }
                                 
                                 // If a location is selected, show the state dropdown
@@ -174,17 +177,19 @@
                                 }
                             }
                         </script>
+                        
     
                         <!-- Destination Station -->
                         <div class="form-group row">
                             <label for="destination-station" class="col-12 col-md-4 text-center">Destination Station</label>
                             <div class="col-12 col-md-8">
                                 <select id="route" name="route" class="form-control" required>
-                                    <option value="UDAIPUR">UDAIPUR</option>
-                                    <option value="JUBBARHATTI">JUBBARHATTI</option>
-                                    <option value="DENPASAR">DENPASAR</option>
-                                    <option value="KOCHI">KOCHI</option>
-                                    <option value="VELANA">VELANA</option>
+                                    <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                            <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                            <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                            
+                            <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                            <option value="VELANA">VELANA</option> <!--MALDIVES-->
                                 </select>
                             </div>
                         </div>

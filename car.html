@@ -86,13 +86,75 @@
 <div class="my-container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2 class="text-center" style="color: black"><B> BOOK YOUR CAB</B></h2>
+            <h2 class="text-center" style="color:white"><B> BOOK YOUR CAB</B></h2><br>
             <form id="cab-booking-form" action="#" method="POST">
                 <!-- First Row: Pick-Up and Drop-Off Locations, Date and Time -->
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="pickup-location">Pick-Up Location</label>
-                        <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter pick-up location" required>
+                        <div class="form-group row">
+                            <div class="select-container">
+                                <label for="location" class="col-12 col-md-4 text-center">Location</label>
+                        
+                                <select id="location" name="location" onchange="updateStates()">
+                                    <option value="">--Select Location--</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Kullu-Manali">Kullu-Manali</option>
+                                    <option value="JUBBARHATTI">JUBBARHATTI</option> <!-- SHIMLA -->
+                                    <option value="Kochi">Kochi</option>
+                                    <option value="Maldives">Maldives</option> <!-- Added Maldives -->
+                                </select>
+                            </div>
+                        
+                            <div class="select-container" id="state-container" style="display:none;">
+                                <label for="state">Choose your state:</label>
+                                <select id="state" name="state">
+                                    <!-- States will be populated here based on the location -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <script>
+                            function updateStates() {
+                                const location = document.getElementById("location").value;
+                                const stateDropdown = document.getElementById("state");
+                                const stateContainer = document.getElementById("state-container");
+                                
+                                // Clear existing options in the state dropdown
+                                stateDropdown.innerHTML = "";
+                                
+                                // Check the selected location and update states accordingly
+                                let states = [];
+                                
+                                if (location === "Udaipur") {
+                                    states = ["Jaipur", "Ahmedabad", "Delhi"];
+                                } else if (location === "Kullu-Manali") {
+                                    states = ["Delhi", "Chandigarh"];
+                                } else if (location === "Kochi") {
+                                    states = ["Bengaluru", "Chennai"];
+                                } else if (location === "Maldives") {
+                                    states = ["India", "Sri Lanka"];
+                                } else if (location === "JUBBARHATTI") {
+                                    states = ["Haryana", "Himachal Pradesh"];
+                                }
+                                
+                                // If a location is selected, show the state dropdown
+                                if (states.length > 0) {
+                                    stateContainer.style.display = "block";
+                                    
+                                    // Add the states to the dropdown
+                                    states.forEach(state => {
+                                        const option = document.createElement("option");
+                                        option.value = state;
+                                        option.textContent = state;
+                                        stateDropdown.appendChild(option);
+                                    });
+                                } else {
+                                    stateContainer.style.display = "none";
+                                }
+                            }
+                        </script>
+                        
                     </div>
                     <div class="col-md-6 form-group">
                         <label for="drop-location">Drop-Off Location</label>
@@ -101,8 +163,7 @@
                             <option value="UDAIPUR">UDAIPUR</option>
                             <option value="KULLU-MANALI">KULLU-MANALI</option>
                             <option value="JUBBARHATTI">JUBBARHATTI</option>
-                            <option value="DENPASAR">DENPASAR</option>
-                            <option value="KOCHI">KOCHI</option>
+                             <option value="KOCHI">KOCHI</option>
                             <option value="VELANA">VELANA</option>
                         </select>
                     </div>
