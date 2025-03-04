@@ -7,6 +7,7 @@ let errorms = document.getElementById('error-msg')
 
 
 register_btn.addEventListener('click',async function(){
+    event.preventDefault()
     if(username.value == '' || email.value == '' || password.value == '' || repass.value == ''){
         alert('Please fill all the fields');
     }else{
@@ -29,6 +30,12 @@ register_btn.addEventListener('click',async function(){
                     },
                     body:JSON.stringify(data)
                 })
+
+                let result = await response.json()
+
+                if(response.status===400){
+                    console.log("username or email already exist")
+                }
             }catch(err){
                 console.log('fasing some issue while saving the data',err)
                 errorms.innerHTML = err

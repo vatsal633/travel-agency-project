@@ -119,18 +119,61 @@
     
                         <!-- Source Station -->
                         <div class="form-group row">
-                            <label for="destination-station" class="col-12 col-md-4 text-center">Destination Station</label>
-                            <div class="col-12 col-md-8">
-                                <select id="route" name="route" class="form-control" required>
-                                    <option value="UDAIPUR">UDAIPUR</option>
-                                    <option value="JUBBARHATTI"></option>
-                                    <option value="gujrat">gujrat</option>
-                                    <option value="DENPASAR">DENPASAR</option>
-                                    <option value="KOCHI">KOCHI</option>
-                                    <option value="VELANA">VELANA</option>
+                            <div class="select-container">
+                                <label for="location"class="col-12 col-md-4 text-center">loaction</label>
+                            
+                                <select id="location" name="location" onchange="updateStates()">
+                                    <option value="">--Select Location--</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Kullu-Manali">Kullu-Manali</option>
+                                    <option value="Kochi">Kochi</option>
+                                </select>
+                            </div>
+                        
+                            <div class="select-container" id="state-container" style="display:none;">
+                                <label for="state">Choose your state:</label>
+                                <select id="state" name="state">
+                                    <!-- States will be populated here based on the location -->
                                 </select>
                             </div>
                         </div>
+                        
+                        <script>
+                            function updateStates() {
+                                const location = document.getElementById("location").value;
+                                const stateDropdown = document.getElementById("state");
+                                const stateContainer = document.getElementById("state-container");
+                                
+                                // Clear existing options in the state dropdown
+                                stateDropdown.innerHTML = "";
+                                
+                                // Check the selected location and update states accordingly
+                                let states = [];
+                                
+                                if (location === "Udaipur") {
+                                    states = ["Gujarat", "Madhya Pradesh", "Rajasthan", "Delhi", "Maharashtra"];
+                                } else if (location === "Kullu-Manali") {
+                                    states = ["Delhi", "Punjab", "Haryana", "Uttarakhand", "Rajasthan"];
+                                } else if (location === "Kochi") {
+                                    states = ["Kerala", "Tamil Nadu", "Karnataka", "Andhra Pradesh", "Goa","Maharastra"];
+                                }
+                                
+                                // If a location is selected, show the state dropdown
+                                if (states.length > 0) {
+                                    stateContainer.style.display = "block";
+                                    
+                                    // Add the states to the dropdown
+                                    states.forEach(state => {
+                                        const option = document.createElement("option");
+                                        option.value = state;
+                                        option.textContent = state;
+                                        stateDropdown.appendChild(option);
+                                    });
+                                } else {
+                                    stateContainer.style.display = "none";
+                                }
+                            }
+                        </script>
     
                         <!-- Destination Station -->
                         <div class="form-group row">

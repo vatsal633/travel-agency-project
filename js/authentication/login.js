@@ -1,6 +1,4 @@
-import { json } from "body-parser";
-import e from "express";
-import { resolve } from "path";
+
 
 let email = document.getElementById('email');
 let password = document.getElementById('password');
@@ -24,12 +22,18 @@ loginbtn.addEventListener('click', async function(event) {
                 body:JSON.stringify({email,password})
             })
 
+
+            let result = response.json()
+
             if(response.status(404)){
                 console.log('user not found or something else')
             }
 
-            if(response.status(202)){
+           
 
+            if(response.status===200){
+                console.log("loged in successfuly")
+                window.location.href = "/login.html";
             }
         }catch(err){
             console.log("error while login")
