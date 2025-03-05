@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
 
 const  bookingschema = mongoose.Schema({
-    name:String,
+    first_name:String,
+    last_name:String,
     email:String,
+    mobile_num:Number,
     mode:String,
     payment:Number
 })

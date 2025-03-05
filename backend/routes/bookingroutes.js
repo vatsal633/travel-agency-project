@@ -4,8 +4,8 @@ import booking from "../models/booking"
 
 const router = express.Router()
 
-router.post('/book',(res,req)=>{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-})
+router.post('/:name/book',(res,req)=>{
+
+})  
 
 export default router;
