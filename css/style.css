@@ -2359,12 +2359,17 @@ body, html {
 
 .testimonial .section-title {
     font-size: 24px;
-    color: #555;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
     margin-bottom: 10px;
 }
+
+
+
+
+
 
 .testimonial h1 {
     font-size: 36px;
@@ -2406,7 +2411,7 @@ body, html {
     border-radius: 10px;
     margin-bottom: 20px;
     font-size: 16px;
-    color: #666;
+    color: white;
 }
 
 /* Testimonial Image */
@@ -2435,12 +2440,12 @@ body, html {
 
 .testimonial-info p {
     font-size: 14px;
-    color: #888;
+    color: #fbf5f5;
 }
 
 .testimonial-info i {
     font-size: 16px;
-    color: #ffd700;
+    color: white
 }
 
 /* Scroll Button Styles */
