@@ -59,7 +59,7 @@
 
 
     <div class="bus-booking-section-main">
-        
+
         <!-- Booking Form for Route Selection -->
         <section id="booking-form">
             <div class="container">
@@ -67,23 +67,26 @@
                     <h2 style="color: white;">Book Your Bus Ticket</h2>
                     <p>Select your route, choose the date, and book your bus tickets online.</p>
                 </div>
-                <form action="confirm-booking.html" method="POST" class="black">
+                <form id="booking-form" class="black">
+
                     <div class="row">
                         <!-- Route Selection -->-
                         <div class="col-md-4">
                             <label for="route">Select Route</label>
                             <select id="route" name="route" class="form-control" required>
-                                        <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                                        <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                                        <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->                                       
-                                        <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                                        <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                                <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
+                                <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                                <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+                                <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                                <option value="VELANA">VELANA</option> <!--MALDIVES-->
                             </select>
                         </div>
-                        
+
                         <!-- Date Selection -->
                         <div class="col-md-4">
-                            <label for="date"><center>Select Date</center></label>
+                            <label for="date">
+                                <center>Select Date</center>
+                            </label>
                             <input type="date" id="date" name="date" class="form-control" required>
                         </div>
 
@@ -96,7 +99,7 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                            <button type="button" class="btn btn-primary">Confirm Booking</button>
                         </div>
                     </div>
                 </form>
@@ -171,7 +174,7 @@
 
                     <div class="col-md-6">
                         <h3>Passenger Details</h3>
-                        <form action="payment.html" method="POST">
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -182,11 +185,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="text" id="phone" name="phone" class="form-control" required>
+                                <input type="number" id="phone" name="phone" class="form-control" required>
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success">Confirm & Pay</button>
+                                <button type="button" class="btn btn-success" id="confirmbtn">Confirm & Pay</button>
                             </div>
                         </form>
                     </div>
@@ -197,7 +200,8 @@
 
 
         <!-- payment section start -->
-       <br> <section id="payment">
+        <br>
+        <section id="payment">
 
             <div class="container">
                 <div class="section-header text-center">
@@ -212,7 +216,7 @@
                     <option value="paypal">PayPal</option>
                     <option value="cash">Cash on Arrival</option>
                 </select>
-                
+
         </section>
 
 
@@ -226,7 +230,8 @@
                 <div class="section-header">
                     <h2>Click Below to Call Us</h2>
                     <p>
-                        Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, 
+                        Call us today to start planning your dream vacation! Our team is ready to help with personalized
+                        itineraries and exclusive deals.For any query,
                         <br>we’re here to assist you.
                     </p>
                 </div>
@@ -260,11 +265,11 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                    
+
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-              
+
             </div>
         </div>
     </div>
@@ -295,6 +300,50 @@
     <!-- Main Javascript File -->
     <script src="js/main.js"></script>
     <script src="myjs.js"></script>
+    <script>
+        document.getElementById('confirmbtn').addEventListener('click', function () {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const route = document.getElementById('route').value;
+            const date = document.getElementById('date').value;
+            const passengers = document.getElementById('passengers').value;
+
+            const totalPrice = passengers * 700; // Assuming the price per passenger for this bus is 700
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            const bookingData = {
+                name,
+                email,
+                phone,
+                route,
+                date,
+                passengers,
+                totalPrice,
+                paymentMethod,
+            };
+
+            // Send data to backend
+            fetch('http://localhost:8080/api/book', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bookingData),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Booking Confirmed!');
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+
+
+                });
+
+            console.log(bookingData)
+        })
+    </script>
+
 </body>
 
 </html>

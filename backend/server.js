@@ -33,7 +33,7 @@ bookingdb.on('error', (err) => console.error('❌ Error connecting to login data
 
 //rotues
 app.use('/api/auth', userAuthroute)
-app.use('/api', bookingroutes)
+app.use('/api', bookingroutes)//route for bus book
 
 
 //connecting to database
