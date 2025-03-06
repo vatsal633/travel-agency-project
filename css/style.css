@@ -2247,7 +2247,7 @@ button[type="submit"] {
 /* Ensure the carousel takes up full width and height */
 .carousel {
     width: 100%;
-    height: 100%;
+    height: 75%;
     overflow: hidden; /* Prevent horizontal scrollbar inside carousel */
 }
 
@@ -2346,3 +2346,211 @@ body, html {
     max-width: 100%;
     overflow-x: hidden; /* Prevent horizontal overflow from other content */
 }
+
+
+
+
+
+/* Testimonial Section */
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.testimonial .section-title {
+    font-size: 24px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.testimonial h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Testimonial Items Wrapper */
+.testimonial-items-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the items don't wrap to a new line */
+    gap: 30px; /* Spacing between items */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Testimonial Item */
+.testimonial-item {
+    min-width: 250px; /* Adjust width to fit better */
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Testimonial Comment */
+.testimonial-comment {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Testimonial Image */
+.testimonial-img {
+    padding: 10px;
+}
+
+.testimonial-img img {
+    width: 120px; /* Set to medium size */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Testimonial Info */
+.testimonial-info {
+    margin-top: -35px;
+    text-align: center;
+}
+
+.testimonial-info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-info p {
+    font-size: 14px;
+    color: #888;
+}
+
+.testimonial-info i {
+    font-size: 16px;
+    color: #ffd700;
+}
+
+/* Scroll Button Styles */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Styles for Smooth Scrolling */
+.testimonial-carousel-wrapper {
+    position: relative;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 100%;
+}
+
+
+
+
+
+/*** Gallery Start ***/
+.gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.gallery .gallery-item .gallery-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.5s;
+}
+
+.gallery .gallery-item .gallery-content .gallery-info {
+    position: relative;
+    margin-bottom: -100%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gallery .gallery-item .gallery-plus-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.gallery .gallery-item:hover .gallery-content .gallery-info,
+.gallery .gallery-item:hover .gallery-plus-icon {
+   opacity: 1;
+   margin: 0;
+}
+
+.gallery .gallery-item img {
+    transition: 0.5s;
+}
+
+.gallery .gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+.gallery .gallery-item:hover .gallery-content {
+    background: rgba(19, 53, 123, 0.8);
+}
+
+.gallery .tab-class .nav-item {
+    padding: 0 0 20px 0;
+}
+.gallery .tab-class .nav-item a.active {
+    background: var(--bs-primary) !important;
+}
+
+.gallery .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important;
+}
+
+/*** Gallery End ***/
