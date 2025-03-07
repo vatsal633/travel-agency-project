@@ -33,44 +33,7 @@
     <link href="css/style.css" rel="stylesheet">
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Define sub-options for each route
-            const subRoutes = {
-                "UDAIPUR": ["City Palace", "Lake Pichola", "Fateh Sagar Lake"],
-                "JUBBARHATTI": ["Shimla Airport", "Mall Road", "Kufri"],
-                "gujrat": ["Ahmedabad", "Surat", "Vadodara"],
-                "DENPASAR": ["Kuta Beach", "Ubud", "Tanah Lot"],
-                "KOCHI": ["Fort Kochi", "Marine Drive", "Lulu Mall"],
-                "VELANA": ["Male City", "Hulhumale", "Maafushi"]
-            };
-
-            const routeDropdown = document.getElementById("route");
-            const subRouteDropdown = document.getElementById("sub-route");
-
-            routeDropdown.addEventListener("change", function () {
-                const selectedRoute = this.value;
-                const subOptions = subRoutes[selectedRoute] || [];
-
-                // Clear previous options
-                subRouteDropdown.innerHTML = "";
-
-                // Add default option
-                const defaultOption = document.createElement("option");
-                defaultOption.textContent = "Select Sub Destination";
-                defaultOption.value = "";
-                subRouteDropdown.appendChild(defaultOption);
-
-                // Add new options based on selection
-                subOptions.forEach(function (sub) {
-                    const option = document.createElement("option");
-                    option.textContent = sub;
-                    option.value = sub;
-                    subRouteDropdown.appendChild(option);
-                });
-            });
-        });
-    </script>
+   
 
 </head>
 
@@ -80,18 +43,26 @@
         <a href="index.html" class="text-light logo"><img src="./img/logo.png" alt=""></a>
 
         <div class="phone"><i class="fa fa-phone"></i>+1 234 567 8900</div>
+        
         <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
         <nav class="main-menu top-menu">
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About US</a></li>
-                <li><a href="room.html">Apartments</a></li>
-                <li><a href="amenities.html">Amenities</a></li>
-                <li><a href="booking.html">Booking</a></li>
                 <li><a href="register.html">Register</a></li> 
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+                
+                <!-- Fixed Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a href="places.html" class="dropdown-item">Places</a></li>
+                        <li><a href="hotelplaces.html" class="dropdown-item">Booking</a></li>
+                        <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
+                    </ul>
+                </li>
+                
         </nav>
     </header>
     <!-- Train Ticket Booking Section Start -->

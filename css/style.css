@@ -2641,4 +2641,18 @@ body, html {
 
 
 
+/* Make dropdown text white */
+.custom-dropdown .dropdown-item {
+    color: white !important; /* Force white text */
+}
 
+/* Change background color of dropdown */
+.custom-dropdown {
+    background-color: black !important; /* Dark background */
+}
+
+/* Make sure hover effect is visible */
+.custom-dropdown .dropdown-item:hover {
+    background-color: gray !important; /* Light gray hover */
+    color: white!important; /* Keep text white */
+}

@@ -46,16 +46,23 @@
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About US</a></li>
-                <li><a href="room.html">Apartments</a></li>
-                <li><a href="amenities.html">Amenities</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="register.html">Register</a></li>
+                
+                
+                <li><a href="register.html">Register</a></li> 
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a href="places.html class="dropdown-item">places</a></li>
+                        <li><a href="hotrelplaces.html" class="dropdown-item">Booking</a></li>
+                        <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
+                        
+                    </ul>
+                </li>
+                </ul>
         </nav>
     </header>
-
 
 
     <div class="bus-booking-section-main">
@@ -301,13 +308,13 @@
     <script src="js/main.js"></script>
     <script src="myjs.js"></script>
     <script>
-        document.getElementById('confirmbtn').addEventListener('click', function () {
+        document.getElementById('confirmbtn').addEventListener('click', async function () {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const route = document.getElementById('route').value;
             const date = document.getElementById('date').value;
-            const passengers = document.getElementById('passengers').value;
+            const passengers =  parseInt(document.getElementById('passengers').value, 10);
 
             const totalPrice = passengers * 700; // Assuming the price per passenger for this bus is 700
             const paymentMethod = document.getElementById('payment-method').value;
@@ -324,23 +331,28 @@
             };
 
             // Send data to backend
-            fetch('http://localhost:8080/api/book', {
-                method: 'POST',
+            try{
+
+                await fetch('http://localhost:8080/api/book', {
+                    method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingData),
             })
-                .then(response => response.json())
-                .then(data => {
-                    alert('Booking Confirmed!');
-                    console.log(data);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
+            .then(response => response.json())
+            .then(data => {
+                alert('Booking Confirmed!');
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                
+                
+            });
+        }catch(err){
+            console.log("error while fetching the details",err);
+        }
 
-
-                });
-
-            console.log(bookingData)
+            // console.log(bookingData)
         })
     </script>
 
