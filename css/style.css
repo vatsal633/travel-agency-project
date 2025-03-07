@@ -2559,3 +2559,86 @@ body, html {
 }
 
 /*** Gallery End ***/
+
+
+
+
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*** Package ***/
+.package-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.package-item img {
+    transition: .5s;
+}
+
+.package-item:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+.package-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.package-item img {
+    position: absolute;
+    bottom: 0; /* Starts from the bottom */
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease-out;
+}
+
+.package-item:hover img {
+    transform: translateY(-100%); /* Scroll the image up when hovered */
+}
+
+
+
+
