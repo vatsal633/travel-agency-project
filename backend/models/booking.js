@@ -1,33 +1,15 @@
-/*port mongoose from "mongoose";
+import mongoose from "mongoose";
 
 const  bookingschema = mongoose.Schema({
-    first_name:String,
-    email:String,
-    mobile_num:Number,
-    payment:Number
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    phone: { type: String, required: true },  // Changed from Number to String
+    route: { type: String, required: true },
+    date: { type: Date, required: true },  // Ensures proper Date format
+    passengers: { type: Number, required: true },
+    totalPrice: { type: Number, required: true },
+    paymentMethod: { type: String, required: true }
 })
 
-const  booking = mongoose.model('bus_bookings', bookingschema);
+const booking = mongoose.model('bus_bookings', bookingschema);
 export default booking;
-*/
-
-
-
-
-const mongoose = require('mongoose');
-
-const BookingSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    phone: String,
-    route: String,
-    date: String,
-    passengers: Number,
-    bus: String,
-    totalPrice: Number,
-    paymentMethod: String,
-    createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Booking', BookingSchema);
- 

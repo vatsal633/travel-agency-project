@@ -24,7 +24,7 @@ logindb.on('error', (err) => console.error('❌ Error connecting to login databa
 
 
 
-const bookingdb = mongoose.createConnection(MONGO_URI || 'mongodb://127.0.0.1:27017/booking_database',{
+const bookingdb = mongoose.createConnection(MONGO_URI || 'mongodb://127.0.0.1:27017/bus_booking',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
