@@ -68,3 +68,20 @@
 
 
 
+
+function scrollLeft() {
+    document.querySelector('.packages-carousel').scrollBy({
+        left: -300, // Adjust scroll amount
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    document.querySelector('.packages-carousel').scrollBy({
+        left: 300, // Adjust scroll amount
+        behavior: 'smooth'
+    });
+}
+
+
+
