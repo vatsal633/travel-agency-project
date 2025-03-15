@@ -1,8 +1,16 @@
 import express from 'express'
 import Data from '../models/Login.js';
+import mongoose from 'mongoose';
 const router = express.Router();
 
 
+
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/user_data', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => { console.log("login data connected successfully") })
+.catch((err) => { console.log("facing some error while connecting to database", err) })
 
 //get req for register
 router.post('/register', async (req, res) => {
@@ -41,8 +49,8 @@ router.post('/login', async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
 
-        if(user.email!=email){
-            return res.status(400).json({message:"Invalid email"})
+        if (user.email != email) {
+            return res.status(400).json({ message: "Invalid email" })
         }
 
         res.status(200).json({ message: "Login successful", user });

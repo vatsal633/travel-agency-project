@@ -20,38 +20,38 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('refreshBookings').addEventListener('click', function () {
         this.classList.add('spin');
         document.getElementById('refreshText').textContent = 'Refreshing...';
-        fetchBookings();
+        // fetchBookings();
     });
 
     // Event listener for adding package
-    document.getElementById('addPackageForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    // document.getElementById('addPackageForm').addEventListener('submit', function (event) {
+    //     event.preventDefault();
 
-        const packageName = document.getElementById('packageName').value;
-        const packageDescription = document.getElementById('packageDescription').value;
-        const packageImage = document.getElementById('packageImage').files[0];
+    //     const packageName = document.getElementById('packageName').value;
+    //     const packageDescription = document.getElementById('packageDescription').value;
+    //     const packageImage = document.getElementById('packageImage').files[0];
 
-        const formData = new FormData();
-        formData.append('name', packageName);
-        formData.append('description', packageDescription);
-        formData.append('image', packageImage);
+    //     const formData = new FormData();
+    //     formData.append('name', packageName);
+    //     formData.append('description', packageDescription);
+    //     formData.append('image', packageImage);
 
-        fetch('http://localhost:4000/addPackage', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Package added successfully:', data);
-            // Clear the form inputs
-            document.getElementById('packageName').value = '';
-            document.getElementById('packageDescription').value = '';
-            document.getElementById('packageImage').value = '';
-        })
-        .catch(error => {
-            console.error('Error adding package:', error);
-        });
-    });
+    //     fetch('http://localhost:4000/addPackage', {
+    //         method: 'POST',
+    //         body: formData
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('Package added successfully:', data);
+    //         // Clear the form inputs
+    //         document.getElementById('packageName').value = '';
+    //         document.getElementById('packageDescription').value = '';
+    //         document.getElementById('packageImage').value = '';
+    //     })
+    //     .catch(error => {
+    //         console.error('Error adding package:', error);
+    //     });
+    // });
 
     // Event listener for deleting booking
     document.getElementById('bookingCards').addEventListener('click', function (event) {
@@ -152,85 +152,85 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update clock
     updateClock();
-    fetchBookings();
+    // fetchBookings();
 });
 
 // Function to fetch bookings
-function fetchBookings() {
-    fetch('db.json')
-        .then(response => response.json())
-        .then(data => {
-            displayBookings(data.bookings);
-            setTimeout(() => {
-                document.getElementById('refreshBookings').classList.remove('spin');
-                document.getElementById('refreshText').textContent = 'Refresh';
-            }, 1000);
-        })
-        .catch(error => {
-            console.error('Error loading the bookings:', error);
-            setTimeout(() => {
-                document.getElementById('refreshBookings').classList.remove('spin');
-                document.getElementById('refreshText').textContent = 'Refresh';
-            }, 1000);
-        });
-}
+// function fetchBookings() {
+//     fetch('db.json')
+//         .then(response => response.json())
+//         .then(data => {
+//             displayBookings(data.bookings);
+//             setTimeout(() => {
+//                 document.getElementById('refreshBookings').classList.remove('spin');
+//                 document.getElementById('refreshText').textContent = 'Refresh';
+//             }, 1000);
+//         })
+//         .catch(error => {
+//             console.error('Error loading the bookings:', error);
+//             setTimeout(() => {
+//                 document.getElementById('refreshBookings').classList.remove('spin');
+//                 document.getElementById('refreshText').textContent = 'Refresh';
+//             }, 1000);
+//         });
+// }
 
-// Function to display bookings
-function displayBookings(bookings) {
-    const container = document.getElementById('bookingCards');
-    container.innerHTML = '';
+// // Function to display bookings
+// function displayBookings(bookings) {
+//     const container = document.getElementById('bookingCards');
+//     container.innerHTML = '';
 
-    if (bookings.length === 0) {
-        const noBookingMsg = document.createElement('p');
-        noBookingMsg.textContent = 'No bookings Received.';
-        noBookingMsg.className = 'no-bookings';
-        container.appendChild(noBookingMsg);
-    } else {
-        bookings.forEach(booking => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <div class="card-header">
-                    ${booking.name}
-                    <button type="button" class="delete-btn" data-booking-id="${booking.id}">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-                <div class="card-body">
-                    <p>Email: ${booking.email}</p>
-                    <p>Phone: ${booking.phone}</p>
-                    <p>Address: ${booking.address}</p>
-                    <p>Location: ${booking.location}</p>
-                    <p>Guests: ${booking.guests}</p>
-                    <p>Arrival: ${booking.arrivals}</p>
-                    <p>Leaving: ${booking.leaving}</p>
-                    <button type="button" class="mail-btn" onclick="mailCustomer('${booking.name}', '${booking.email}', '${booking.phone}', '${booking.address}', '${booking.location}', '${booking.guests}', '${booking.arrivals}', '${booking.leaving}')">Email Now</button>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-    }
-}
+//     if (bookings.length === 0) {
+//         const noBookingMsg = document.createElement('p');
+//         noBookingMsg.textContent = 'No bookings Received.';
+//         noBookingMsg.className = 'no-bookings';
+//         container.appendChild(noBookingMsg);
+//     } else {
+//         bookings.forEach(booking => {
+//             const card = document.createElement('div');
+//             card.className = 'card';
+//             card.innerHTML = `
+//                 <div class="card-header">
+//                     ${booking.name}
+//                     <button type="button" class="delete-btn" data-booking-id="${booking.id}">
+//                         <i class="fas fa-trash"></i>
+//                     </button>
+//                 </div>
+//                 <div class="card-body">
+//                     <p>Email: ${booking.email}</p>
+//                     <p>Phone: ${booking.phone}</p>
+//                     <p>Address: ${booking.address}</p>
+//                     <p>Location: ${booking.location}</p>
+//                     <p>Guests: ${booking.guests}</p>
+//                     <p>Arrival: ${booking.arrivals}</p>
+//                     <p>Leaving: ${booking.leaving}</p>
+//                     <button type="button" class="mail-btn" onclick="mailCustomer('${booking.name}', '${booking.email}', '${booking.phone}', '${booking.address}', '${booking.location}', '${booking.guests}', '${booking.arrivals}', '${booking.leaving}')">Email Now</button>
+//                 </div>
+//             `;
+//             container.appendChild(card);
+//         });
+//     }
+// }
 
-// Function to delete booking
-function deleteBooking(event, id) {
-    event.preventDefault(); // Prevent default form submission behavior
+// // Function to delete booking
+// function deleteBooking(event, id) {
+//     event.preventDefault(); // Prevent default form submission behavior
 
-    fetch(`http://localhost:3000/bookings/${id}`, {
-        method: 'DELETE'
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Deleted:', id);
-            fetchBookings(); // Fetch bookings again to update UI
-        } else {
-            throw new Error('Failed to delete booking');
-        }
-    })
-    .catch(error => {
-        console.error('Error deleting booking:', error);
-    });
-}
+//     fetch(`http://localhost:3000/bookings/${id}`, {
+//         method: 'DELETE'
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             console.log('Deleted:', id);
+//             fetchBookings(); // Fetch bookings again to update UI
+//         } else {
+//             throw new Error('Failed to delete booking');
+//         }
+//     })
+//     .catch(error => {
+//         console.error('Error deleting booking:', error);
+//     });
+// }
 
 // Function to show a specific section
 function showSection(sectionId) {

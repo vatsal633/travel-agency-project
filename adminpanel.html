@@ -35,9 +35,11 @@
             <h1 class="header">Add Package</h1>
             <form id="addPackageForm" class="form-addpkg" enctype="multipart/form-data">
                 <input type="text" id="packageName" class="input-field" placeholder="Package Name" required>
-                <textarea id="packageDescription" class="input-field" placeholder="Package Description" required></textarea>
-                <input type="file" id="packageImage" class="input-field" required>
-                <button type="submit" class="action-button">Add Package</button>
+                <input type="number" id="packagePrice" class="input-field" placeholder="Package price" required>
+                <textarea id="packageDescription" class="input-field" placeholder="Package Description"
+                    required></textarea>
+                <input type="file" id="packageImage" class="input-field">
+                <button type="button" id="subtn" class="action-button">Add Package</button>
             </form>
         </div>
 
@@ -60,6 +62,33 @@
     </div>
 
     <script src="js/admin.js"></script>
+    <script>
+        //function for add package details to database 
+        document.getElementById("subtn").addEventListener("click", async () => {
+            console.log("dsfs")
+            try {
+                let name = document.getElementById('packageName').value
+                let located = document.getElementById('packageDescription').value 
+                let price =document.getElementById('packagePrice').value
+                
+
+                let response = await fetch('http://localhost:8080/package/add-package', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({name,located,price})
+                })
+
+                let result = await response.json()
+                console.log(result)
+            } catch (err) {
+                console.log("facing some issue while connetion to theserver error", err);
+            }
+
+        })
+
+    </script>
 </body>
 
 </html>
