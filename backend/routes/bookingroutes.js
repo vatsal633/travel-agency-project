@@ -5,11 +5,11 @@ import mongoose from "mongoose"
 
 const router = express.Router()
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/bus_booking',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(()=>{console.log("bus booking database connected")})
-.catch((err)=>{console.log("error while connecting bus booking database",err)})
+// mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/bus_booking',{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// }).then(()=>{console.log("bus booking database connected")})
+// .catch((err)=>{console.log("error while connecting bus booking database",err)})
 
 router.post('/book', async (req, res) => {
     try {

@@ -8,6 +8,7 @@ import packageroutes from "./routes/packageroutes.js"
 import flightrouter from "./routes/flightroutes.js"
 import hotelroutes from "./routes/hotelroutes.js"
 import carrouter from "./routes/carrouter.js"
+import trainRouter from "./routes/trainRoutes.js"
 const app = express()
 
 const port = process.env.PORT || 8080; // Use environment variable for 
@@ -16,6 +17,13 @@ const port = process.env.PORT || 8080; // Use environment variable for
 app.use(cors())
 app.use(express.json())
 
+
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/user_data', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => { console.log("login data connected successfully") })
+.catch((err) => { console.log("facing some error while connecting to database", err) })
 
 
 
@@ -26,6 +34,7 @@ app.use('/package',packageroutes)
 app.use('/flight',flightrouter)
 app.use("/hotel",hotelroutes)
 app.use("/car",carrouter)
+app.use('/train',trainRouter)
 
 
 //connecting to database
