@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    
+
 
     <!-- Favicons -->
     <link href="img/logo.ico" rel="icon">
@@ -26,14 +26,20 @@
     <link href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
 
-   
+
 
     <!-- Main Stylesheet File -->
     <link href="css/hover-style.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 
-   
+    <style>
+        .location {
+            padding: 12px;
+            opacity: 72%;
+            width: 99%;
+        }
+    </style>
 
 </head>
 
@@ -47,12 +53,12 @@
         <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
         <nav class="main-menu top-menu">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About US</a></li>
-                <li><a href="register.html">Register</a></li> 
+                <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                
+
                 <!-- Fixed Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -60,25 +66,25 @@
                         <li><a href="package.html" class="dropdown-item">package</a></li>
                         <li><a href="hotrelplaces.html" class="dropdown-item">Booking</a></li>
                         <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
-                    
-                
+
+
                     </ul>
                 </li>
-                
+
         </nav>
     </header>
     <!-- Train Ticket Booking Section Start -->
     <div id="train-booking" class="container train-from text-white">
         <div class="container2">
             <div class="section-header">
-                <h2>Book Your Tr ain Ticket</h2>
+                <h2>Book Your Train Ticket</h2>
                 <p>Fill in your travel details to book your train ticket. Choose the source, destination, and travel date.</p>
             </div>
             <div class="row">
                 <!-- Train Booking Form -->
                 <div class="col-12 col-md-6">
                     <form action="train-booking-confirmation.html" method="POST" id="train-booking-form">
-                        
+
                         <!-- Departure Date -->
                         <div class="form-group row">
                             <label for="departure-date" class="col-12 col-md-4 text-center">Date</label>
@@ -89,13 +95,13 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-    
+
                         <!-- Source Station -->
                         <div class="form-group row">
                             <div class="select-container">
-                                <label for="location" class="col-12 col-md-4 text-center">Location</label>
-                        
-                                <select id="location" name="location" onchange="updateStates()">
+                                <label for="location" class="col-12 col-md-4 text-center ">Location</label>
+
+                                <select id="location" name="location"  class="location" onchange="updateStates()">
                                     <option value="">--Select Location--</option>
                                     <option value="Udaipur">Udaipur</option>
                                     <option value="Kullu-Manali">Kullu-Manali</option>
@@ -103,27 +109,27 @@
                                     <option value="Kochi">Kochi</option>
                                 </select>
                             </div>
-                        
+
                             <div class="select-container" id="state-container" style="display:none;">
                                 <label for="state">Choose your state:</label>
-                                <select id="state" name="state">
+                                <select id="state" name="state" class="location">
                                     <!-- States will be populated here based on the location -->
                                 </select>
                             </div>
                         </div>
-                        
+
                         <script>
                             function updateStates() {
                                 const location = document.getElementById("location").value;
                                 const stateDropdown = document.getElementById("state");
                                 const stateContainer = document.getElementById("state-container");
-                                
+
                                 // Clear existing options in the state dropdown
                                 stateDropdown.innerHTML = "";
-                                
+
                                 // Check the selected location and update states accordingly
                                 let states = [];
-                                
+
                                 if (location === "Udaipur") {
                                     states = ["Gujarat", "Madhya Pradesh", "Rajasthan", "Delhi", "Maharashtra"];
                                 } else if (location === "Kullu-Manali") {
@@ -133,11 +139,11 @@
                                 } else if (location === "JUBBARHATTI") {
                                     states = ["Haryana", "Himachal Pradesh"];
                                 }
-                                
+
                                 // If a location is selected, show the state dropdown
                                 if (states.length > 0) {
                                     stateContainer.style.display = "block";
-                                    
+
                                     // Add the states to the dropdown
                                     states.forEach(state => {
                                         const option = document.createElement("option");
@@ -150,23 +156,24 @@
                                 }
                             }
                         </script>
-                        
-    
+
+
                         <!-- Destination Station -->
                         <div class="form-group row">
-                            <label for="destination-station" class="col-12 col-md-4 text-center">Destination Station</label>
+                            <label for="destination-station" class="col-12 col-md-4 text-center">Destination
+                                Station</label>
                             <div class="col-12 col-md-8">
                                 <select id="route" name="route" class="form-control" required>
                                     <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                            <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                            <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                            
-                            <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                            <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                                    <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
+                                    <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
+
+                                    <option value="KOCHI">KOCHI</option> <!--KERALA-->
+                                    <option value="VELANA">VELANA</option> <!--MALDIVES-->
                                 </select>
                             </div>
                         </div>
-    
+
                         <!-- Train Class -->
                         <div class="form-group row">
                             <label for="train-class" class="col-12 col-md-4 text-center"><b>Train Class</b></label>
@@ -179,31 +186,34 @@
                                 </select>
                             </div>
                         </div>
-    
+
                         <!-- Passenger Name -->
                         <div class="form-group row">
                             <label for="passenger-name" class="col-12 col-md-4 text-center">Passenger Name</label>
                             <div class="col-12 col-md-8">
-                                <input type="text" class="form-control" id="passenger-name" name="passenger-name" placeholder="Enter Passenger Name" required>
+                                <input type="text" class="form-control" id="passenger-name" name="passenger-name"
+                                    placeholder="Enter Passenger Name" required>
                             </div>
                         </div>
-    
+
                         <!-- Passenger Email -->
                         <div class="form-group row">
                             <label for="passenger-email" class="col-12 col-md-4 text-center">Email Address</label>
                             <div class="col-12 col-md-8">
-                                <input type="email" class="form-control" id="passenger-email" name="passenger-email" placeholder="Enter Email Address" required>
+                                <input type="email" class="form-control" id="passenger-email" name="passenger-email"
+                                    placeholder="Enter Email Address" required>
                             </div>
                         </div>
-    
+
                         <!-- Passenger Phone -->
                         <div class="form-group row">
                             <label for="passenger-phone" class="col-12 col-md-4 text-center">Phone Number</label>
                             <div class="col-12 col-md-8">
-                                <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone" placeholder="Enter Phone Number" required>
+                                <input type="tel" class="form-control" id="passenger-phone" name="passenger-phone"
+                                    placeholder="Enter Phone Number" required>
                             </div>
                         </div>
-    
+
                         <div class="form-group row">
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-primary">Book Now</button>
@@ -213,7 +223,7 @@
                 </div>
     
                 <!-- Ticket Summary (right side) -->
-                <!-- <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6">
                     <div class="ticket-summary">
                         <h4>Your Ticket Summary</h4>
                         <p>Departure Date: <span id="summary-departure-date">-</span></p>
@@ -224,7 +234,7 @@
                         <hr>
                         <p><strong>Total Fare: <span id="total-fare">-</span></strong></p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -265,13 +275,14 @@
             <!-- The rest of your content here -->
         </div>
     </div>
-    
+
     <div id="call-us">
         <div class="container">
             <div class="section-header">
                 <h2>Click Below to Call Us</h2>
                 <p>
-                    Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, 
+                    Call us today to start planning your dream vacation! Our team is ready to help with personalized
+                    itineraries and exclusive deals.For any query,
                     <br>we’re here to assist you.
                 </p>
             </div>
@@ -305,11 +316,11 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                    
+
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-              
+
             </div>
         </div>
     </div>

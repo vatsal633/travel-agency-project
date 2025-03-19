@@ -26,6 +26,13 @@
     /* Ensures no content spills out of the border */
 }
 
+.location{
+    padding: 12px;
+    opacity: 72%;
+    width: 115%;
+}
+
+
 /* Add the blurred background effect */
 .my-container::before {
     position: absolute;
