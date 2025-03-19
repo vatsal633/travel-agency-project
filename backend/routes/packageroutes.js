@@ -14,8 +14,8 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/package',{
 //route for adding a new package
 router.post('/add-package',async(req,res)=>{
     try{
-        const {name,located,price} = req.body
-        const new_package = new packages({name,located,price})
+        const {name,located,price,image} = req.body
+        const new_package = new packages({name,located,price,image})
         await new_package.save()
         
     }catch(err){

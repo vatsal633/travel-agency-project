@@ -3,12 +3,13 @@
 /* ================================================= */
 
 * {
- /*vab booking*/
+    /*vab booking*/
     box-sizing: border-box;
 }
+
 .my-container {
     position: relative;
-    display:flex;
+    display: flex;
     padding: 60px 0;
     background-image: url('../img/cab.jpg');
     width: 100%;
@@ -16,10 +17,13 @@
     background-position: center;
     text-align: center;
     background-repeat: no-repeat;
-    border: 2px solid #706868; /* Add border */
-     background-color: rgba(0, 0, 0, .5);
-    border-radius: 10px; /* Optional: Rounded corners */
-    overflow: hidden; /* Ensures no content spills out of the border */
+    border: 2px solid #706868;
+    /* Add border */
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    overflow: hidden;
+    /* Ensures no content spills out of the border */
 }
 
 /* Add the blurred background effect */
@@ -29,9 +33,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: inherit; /* Inherit the background image */
-    filter: blur(8px); /* Adjust the blur level */
-    z-index: -1; /* Ensures the blur stays behind the content */
+    background-image: inherit;
+    /* Inherit the background image */
+    filter: blur(8px);
+    /* Adjust the blur level */
+    z-index: -1;
+    /* Ensures the blur stays behind the content */
     background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,11 +64,11 @@
 
 
 
-.main-container2{
-    
+.main-container2 {
+
     min-height: 100vh;
     /* Full height of the viewport */
-    
+
     /* Enable flexbox */
     justify-content: center;
     /* Center horizontally */
@@ -69,11 +76,12 @@
     /* Center vertically */
     flex-direction: column;
     /* Keep form elements in a column layout */
-   
+
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .justify-center {
     display: flex;
     justify-content: center;
@@ -82,80 +90,87 @@
 
 
 
-.train-from{
-        position: relative;
-        height: 100% /* or your desired height */
-       max-width: 100%; 
-       
-        background-image: url('../img/train.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    
+.train-from {
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    background-image: url('../img/train.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .train-from::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: inherit; /* Inherit background image from the parent */
-        background-size: cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    /* Inherit background image from the parent */
+    background-size: cover;
 
-        background-position: center;
-        filter: blur(2px); /* Apply the blur effect */
-        
-        z-index: 0; /* Place the pseudo-element behind the content */
-    }
-    .train-from .container2 {
-        
-        position: relative;
-        z-index: 12; /* Keep text and content above the blurred background */
-        color: white; /* Text color (for readability) */
-    }
-    
-    .ticket-summary {
-        background-color:#76767661; /* Light background for visibility */
-        padding: 15px;
-        border-radius: 7px;
-        box-shadow: 0px 4px 10px rgba(192, 162, 162, 0.1); /* Subtle shadow */
-        color: white;
-    }
-    
-    .ticket-summary h4 {
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-        color: white;
-    }
-    
-    .ticket-summary p {
+    background-position: center;
+    filter: blur(2px);
+    /* Apply the blur effect */
 
-        font-size: 1rem;
-        margin-bottom: 10px;
-        color: white;
-    }
-    
-    .ticket-summary hr {
-        margin: 15px 0;
-        border: 1px solid #ddd;
-        color: white;
-    }
-    
+    z-index: 0;
+    /* Place the pseudo-element behind the content */
+}
 
-.hehe{
+.train-from .container2 {
+
+    position: relative;
+    z-index: 12;
+    /* Keep text and content above the blurred background */
+    color: white;
+    /* Text color (for readability) */
+}
+
+.ticket-summary {
+    background-color: #76767661;
+    /* Light background for visibility */
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0px 4px 10px rgba(192, 162, 162, 0.1);
+    /* Subtle shadow */
+    color: white;
+}
+
+.ticket-summary h4 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.ticket-summary p {
+
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.ticket-summary hr {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+
+.hehe {
     flex-direction: column;
 }
 
-.main-container{
+.main-container {
     display: flex;
 }
 
-.left-section{
-    width:50x;
+.left-section {
+    width: 50x;
     padding: 50px 100px;
 }
 
-.content h1{
+.content h1 {
     font-size: 35px;
     margin: 20px;
 }
@@ -183,7 +198,7 @@
 
 }
 
-.bg-whitee{
+.bg-whitee {
     background-color: #ffffff42;
     padding: 25px;
     margin: 12px 0;
@@ -201,7 +216,7 @@ img {
 
 
 
-.register{
+.register {
     min-height: 100vh;
     /* Full height of the viewport */
     display: flex;
@@ -256,15 +271,16 @@ img {
     color: black;
 }
 
-.text-white{
+.text-white {
     color: white;
 }
-.text-black{
+
+.text-black {
     color: black;
     font-size: large;
 }
 
-.hover-style:hover{
+.hover-style:hover {
     background-color: #246896;
     cursor: pointer;
     transition: 0.5s;
@@ -272,7 +288,7 @@ img {
 
 .password-section ion-icon {
     position: absolute;
-    
+
     right: 10px;
     top: 50%;
     visibility: visible;
@@ -296,7 +312,7 @@ img {
 }
 
 
-.login-button-style{
+.login-button-style {
     border: none;
     background-color: black;
     color: white;
@@ -305,8 +321,8 @@ img {
     width: 53%;
 }
 
-.remember-forgot label{
-    font-weight:bold;
+.remember-forgot label {
+    font-weight: bold;
 }
 
 /* .remember-forgot a{
@@ -316,7 +332,7 @@ img {
 
 
 
-.Forgot-pass-a{
+.Forgot-pass-a {
     margin-left: 34px;
 }
 
@@ -1785,7 +1801,7 @@ input::-ms-input-placeholder {
     background: #222222;
 }
 
-.full-width{
+.full-width {
     width: 100%;
 }
 
@@ -1843,11 +1859,12 @@ input::-ms-input-placeholder {
     margin: 0;
     font-size: 18px;
 }
+
 /* General Styles */
 body {
     font-family: 'Roboto Slab', serif;
     color: #333;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -1863,7 +1880,9 @@ a {
     padding: 0 15px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Raleway', sans-serif;
     color: #333;
 }
@@ -1878,11 +1897,11 @@ h1, h2, h3 {
 /* Bus Routes Section */
 #bus-routes {
     padding: 60px 0;
-    
+
 }
 
-.black{
-    background-color: black           ;
+.black {
+    background-color: black;
 }
 
 #bus-routes .route-card {
@@ -1950,7 +1969,8 @@ h1, h2, h3 {
     color: #333;
 }
 
-#booking-form form select, #booking-form form input {
+#booking-form form select,
+#booking-form form input {
     width: 100%;
     padding: 15px;
     margin-top: 10px;
@@ -1970,7 +1990,7 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-.bus-booking-section-main{
+.bus-booking-section-main {
     width: 67%;
     margin: auto;
     padding: 14px;
@@ -1986,9 +2006,10 @@ h1, h2, h3 {
 /* Style for the booking section with blurred background */
 
 
-.confirmation-section{
+.confirmation-section {
     /* border: solid 1px black; */
 }
+
 .booking-section {
     position: relative;
     padding: 60px 0;
@@ -2010,35 +2031,45 @@ h1, h2, h3 {
     bottom: 0;
     background-image: inherit;
 
-    filter: blur(8px); /* Adjust the blur level */
-    z-index: -1; /* Ensures the blur stays behind the content */
+    filter: blur(8px);
+    /* Adjust the blur level */
+    z-index: -1;
+    /* Ensures the blur stays behind the content */
 }
 
 /* Style the booking form with a border */
 .booking-form {
-    border: 2px solid #ccc; /* You can change the color to fit your design */
+    border: 2px solid #ccc;
+    /* You can change the color to fit your design */
     padding: 20px;
-    color:white;
+    color: white;
     background-color: rgba(0, 0, 0, .5);
-    border-radius: 70px; /* Optional: Rounded corners */
+    border-radius: 70px;
+    /* Optional: Rounded corners */
 }
 
 /* Style the confirmation message */
 .booking-conformation {
-    border:  solid white; /* Green border for confirmation */
+    border: solid white;
+    /* Green border for confirmation */
     padding: 20px;
-    background-color: rgba(0, 255, 0, 0.1); /* Light green background */
-    border-radius: 10px; /* Optional: Rounded corners */
-    color: white; /* Green text */
-    font-size: 16px; /* Adjust the font size */
+    background-color: rgba(0, 255, 0, 0.1);
+    /* Light green background */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    color: white;
+    /* Green text */
+    font-size: 16px;
+    /* Adjust the font size */
     text-align: center;
-    display: none; /* Hidden by default, will be shown after form submission */
+    display: none;
+    /* Hidden by default, will be shown after form submission */
 }
 
 
 .booking-form label {
     font-size: 16px;
-    color: white;                           
+    color: white;
     font-weight: 800;
     margin-bottom: 8px;
 }
@@ -2073,11 +2104,14 @@ h1, h2, h3 {
 
 /* Apply a background color and image */
 body {
-    background-color: #f0f0f0; /* Light background color */
-    font-family: Arial, sans-serif; /* General font for the body */
+    background-color: #f0f0f0;
+    /* Light background color */
+    font-family: Arial, sans-serif;
+    /* General font for the body */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    /* Full viewport height */
 }
 
 /* Center the .ticket1-summary div on the page */
@@ -2090,47 +2124,60 @@ body {
 
 /* Style for the ticket summary container */
 .ticket1-summary {
-     /* Background image for the box */
-    
-    background-size: cover; /* Ensure the image covers the entire container */
-    background-position: center; /* Centers the background image */
+    /* Background image for the box */
+
+    background-size: cover;
+    /* Ensure the image covers the entire container */
+    background-position: center;
+    /* Centers the background image */
     padding: 20px;
-    width: 90%; /* Adjust width */
-    max-width: 600px; /* Max width */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: white; /* White text */
-    margin: 20px; /* Space around the box */
+    width: 90%;
+    /* Adjust width */
+    max-width: 600px;
+    /* Max width */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    color: white;
+    /* White text */
+    margin: 20px;
+    /* Space around the box */
 }
 
 /* Heading style */
 .ticket1-summary h4 {
-    font-size: 1.8rem; /* Larger font for the heading */
+    font-size: 1.8rem;
+    /* Larger font for the heading */
     text-align: center;
     margin-bottom: 20px;
 }
 
 /* Style for the text and spans inside */
 .ticket1-summary p {
-    font-size: 1.1rem; /* Slightly larger text */
+    font-size: 1.1rem;
+    /* Slightly larger text */
     margin-bottom: 10px;
 }
 
 .ticket1-summary span {
     font-weight: bold;
-    color: #f8f8f8; /* Light color for the span values */
+    color: #f8f8f8;
+    /* Light color for the span values */
 }
 
 /* Style for the horizontal line */
 .ticket1-summary hr {
     margin: 20px 0;
-    border: 1px solid #fff; /* Light-colored line */
+    border: 1px solid #fff;
+    /* Light-colored line */
 }
 
 /* Make sure the page looks good on small screens */
 @media (max-width: 768px) {
     .ticket1-summary {
-        width: 95%; /* Full width on smaller screens */
+        width: 95%;
+        /* Full width on smaller screens */
         padding: 15px;
     }
 }
@@ -2139,12 +2186,15 @@ body {
 /* Flight Search Section */
 .flight-search {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    background-image: url('../img/plane.jpg'); /* Path to your background image */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    background-image: url('../img/plane.jpg');
+    /* Path to your background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    filter: blur(0px); /* No blur on the overall section */
+    filter: blur(0px);
+    /* No blur on the overall section */
     height: 100vh;
     color: black;
 }
@@ -2155,6 +2205,7 @@ body {
     z-index: 0;
     padding: 30px;
     text-align: center;
+    height: fit-content;
 }
 
 /* Form wrapper to apply backdrop blur effect */
@@ -2163,9 +2214,12 @@ body {
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-    backdrop-filter: blur(8px); /* Apply the blur effect to the background */
-    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    /* Apply the blur effect to the background */
+    -webkit-backdrop-filter: blur(8px);
+    /* For Safari support */
 }
 
 /* Header Styling */
@@ -2180,7 +2234,8 @@ body {
 
 /* Form Fields */
 .form-control {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for form fields */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Slightly transparent background for form fields */
     border-radius: 5px;
     padding: 12px;
     margin: 10px 0;
@@ -2205,33 +2260,42 @@ button.btn-primary {
 .additional-services {
     margin-top: 20px;
 }
+
 /*contact*/
-.main-container2{
+.main-container2 {
     text-align: center;
-    text:center;
+    text: center;
     textbox: Center;
-            
+
 }
+
 /* train */
 #train-booking-form {
-    border: 2px solid rgba(0, 0, 0, 0.1); /* Transparent border with slight opacity */
-    border-radius: 7px; /* Optional: to make corners rounded */
-    padding: px; /* Optional: add padding to give some space inside */
-    background-color: #76767661; /* Transparent background */
-    box-shadow: 0 4px 8px rgba(77, 67, 67, 0.2); /* Optional: add shadow for better visibility */
-    color:white;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* Transparent border with slight opacity */
+    border-radius: 7px;
+    /* Optional: to make corners rounded */
+    padding: px;
+    /* Optional: add padding to give some space inside */
+    background-color: #76767661;
+    /* Transparent background */
+    box-shadow: 0 4px 8px rgba(77, 67, 67, 0.2);
+    /* Optional: add shadow for better visibility */
+    color: white;
     text-align: center;
     text-align: bold;
 }
 
-    }
+
 .form-group {
     margin-bottom: 25px;
 }
 
 button[type="submit"] {
-    background-color: #007bff; /* Blue background for button */
-    color: white; /* White text color */
+    background-color: #007bff;
+    /* Blue background for button */
+    color: white;
+    /* White text color */
 }
 
 
@@ -2253,14 +2317,16 @@ button[type="submit"] {
 .carousel {
     width: 100%;
     height: 75%;
-    overflow: hidden; /* Prevent horizontal scrollbar inside carousel */
+    overflow: hidden;
+    /* Prevent horizontal scrollbar inside carousel */
 }
 
 /* Make carousel images responsive */
 .carousel-inner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Make sure the image covers the entire carousel area */
+    object-fit: cover;
+    /* Make sure the image covers the entire carousel area */
 }
 
 /* Adjust the carousel caption to make it more visually appealing */
@@ -2283,13 +2349,15 @@ button[type="submit"] {
 /* Styling for the carousel control buttons */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #0c6db4; /* Make the buttons blue */
+    background-color: #0c6db4;
+    /* Make the buttons blue */
 }
 
 /* Position the search bar container */
 .search-bar {
     position: absolute;
-    top: 60%; /* Make it stick just below the carousel */
+    top: 60%;
+    /* Make it stick just below the carousel */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -2301,7 +2369,8 @@ button[type="submit"] {
 
 /* Remove any animation or transition for instant switching */
 .carousel-inner {
-    overflow: hidden; /* Hide overflow content */
+    overflow: hidden;
+    /* Hide overflow content */
 }
 
 /* Disable transitions for immediate image changes */
@@ -2311,7 +2380,8 @@ button[type="submit"] {
 
 /* Disable the carousel auto sliding animation */
 .carousel {
-    animation: none !important; /* Disable any animation */
+    animation: none !important;
+    /* Disable any animation */
 }
 
 /* Style for the carousel captions */
@@ -2328,7 +2398,8 @@ button[type="submit"] {
 /* Control the prev/next buttons background */
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker background for control buttons */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Slightly darker background for control buttons */
 }
 
 /* Customize button hover effect */
@@ -2341,15 +2412,21 @@ button[type="submit"] {
 }
 
 /* Remove the page-level horizontal scrollbar */
-body, html {
-    overflow-x: hidden; /* Disable horizontal scroll on the page */
-    width: 100%; /* Ensure the body takes full width */
+body,
+html {
+    overflow-x: hidden;
+    /* Disable horizontal scroll on the page */
+    width: 100%;
+    /* Ensure the body takes full width */
 }
 
 /* Optional: Ensure any other element within the page doesn't cause overflow */
-.container-fluid, .container, .carousel-inner {
+.container-fluid,
+.container,
+.carousel-inner {
     max-width: 100%;
-    overflow-x: hidden; /* Prevent horizontal overflow from other content */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow from other content */
 }
 
 
@@ -2391,14 +2468,17 @@ body, html {
 /* Testimonial Items Wrapper */
 .testimonial-items-wrapper {
     display: flex;
-    flex-wrap: nowrap; /* Ensure the items don't wrap to a new line */
-    gap: 30px; /* Spacing between items */
+    flex-wrap: nowrap;
+    /* Ensure the items don't wrap to a new line */
+    gap: 30px;
+    /* Spacing between items */
     transition: transform 0.5s ease-in-out;
 }
 
 /* Testimonial Item */
 .testimonial-item {
-    min-width: 250px; /* Adjust width to fit better */
+    min-width: 250px;
+    /* Adjust width to fit better */
     max-width: 300px;
     background-color: #fff;
     border-radius: 10px;
@@ -2425,7 +2505,8 @@ body, html {
 }
 
 .testimonial-img img {
-    width: 120px; /* Set to medium size */
+    width: 120px;
+    /* Set to medium size */
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
@@ -2483,7 +2564,8 @@ body, html {
 /* Additional Styles for Smooth Scrolling */
 .testimonial-carousel-wrapper {
     position: relative;
-    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
     width: 100%;
 }
 
@@ -2536,8 +2618,8 @@ body, html {
 
 .gallery .gallery-item:hover .gallery-content .gallery-info,
 .gallery .gallery-item:hover .gallery-plus-icon {
-   opacity: 1;
-   margin: 0;
+    opacity: 1;
+    margin: 0;
 }
 
 .gallery .gallery-item img {
@@ -2555,6 +2637,7 @@ body, html {
 .gallery .tab-class .nav-item {
     padding: 0 0 20px 0;
 }
+
 .gallery .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -2634,93 +2717,99 @@ body, html {
 
 .package-item img {
     position: absolute;
-    bottom: 0; /* Starts from the bottom */
+    bottom: 0;
+    /* Starts from the bottom */
     left: 0;
     width: 100%;
     transition: transform 0.5s ease-out;
 }
 
 .package-item:hover img {
-    transform: translateY(-100%); /* Scroll the image up when hovered */
+    transform: translateY(-100%);
+    /* Scroll the image up when hovered */
 }
 
 
 
 /* Make dropdown text white */
 .custom-dropdown .dropdown-item {
-    color: white !important; /* Force white text */
+    color: white !important;
+    /* Force white text */
 }
 
 /* Change background color of dropdown */
 .custom-dropdown {
-    background-color: black !important; /* Dark background */
+    background-color: black !important;
+    /* Dark background */
 }
 
 /* Make sure hover effect is visible */
 .custom-dropdown .dropdown-item:hover {
-    background-color: gray !important; /* Light gray hover */
-    color: white!important; /* Keep text white */
+    background-color: gray !important;
+    /* Light gray hover */
+    color: white !important;
+    /* Keep text white */
+}
+
+
+.home-packages {
+    background: var(--light-bg);
+}
+
+.home-packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.home-packages .box-container .box {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.home-packages .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.home-packages .box-container .box .image {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.home-packages .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 0.2s linear;
+}
+
+.home-packages .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-packages .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.home-packages .box-container .box .content p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.home-packages .load-more {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 
 
 
-
-
-
-
-
-  }
-  
-  .home-packages {
-    background: var(--light-bg);
-  }
-  .home-packages .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
-  }
-  .home-packages .box-container .box {
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    background: var(--white);
-  }
-  .home-packages .box-container .box:hover .image img {
-    transform: scale(1.1);
-  }
-  .home-packages .box-container .box .image {
-    height: 25rem;
-    overflow: hidden;
-  }
-  .home-packages .box-container .box .image img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transition: 0.2s linear;
-  }
-  .home-packages .box-container .box .content {
-    padding: 2rem;
-    text-align: center;
-  }
-  .home-packages .box-container .box .content h3 {
-    font-size: 2.5rem;
-    color: var(--black);
-  }
-  .home-packages .box-container .box .content p {
-    font-size: 1.5rem;
-    color: var(--light-black);
-    line-height: 2;
-    padding: 1rem 0;
-  }
-  .home-packages .load-more {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-
-
-  
 
 /*** Team ***/
 .team-item {
@@ -2746,7 +2835,3 @@ body, html {
     background: var(--primary);
     color: #FFFFFF;
 }
-
-  
-
-

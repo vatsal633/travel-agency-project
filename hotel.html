@@ -43,56 +43,55 @@
         <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
         <nav class="main-menu top-menu">
             <ul>
-                
+
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About US</a></li>
-                
-                
-                <li><a href="register.html">Register</a></li> 
+
+
+                <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <ul class="dropdown-menu custom-dropdown">
                         <li><a href="package.html" class="dropdown-item">package</a></li>
-                            <li><a href="hotrelplaces.html" class="dropdown-item">Booking</a></li>
-                            <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
-                        
-                    
+                        <li><a href="hotrelplaces.html" class="dropdown-item">Booking</a></li>
+                        <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
+
+
                     </ul>
                 </li>
-                </ul>
+            </ul>
         </nav>
     </header>
 
-        <!-- Booking Form Section -->
-        <section id="booking" class="booking-section">
-            <div class="container">
-                <form action="booking-confirmation.html" method="POST" class="booking-form">
-                    <h3><center style="color: white;">Book Your Stay</center></h3>
-                    <div class="row">
-                        <!-- Check-in Date -->
-                        <div class="col-md-4">
-                            <label for="checkin-date">Check-in Date</label>
-                            <input type="text" class="form-control datetimepicker-input" id="date-1"
-                            data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY"
-                            required="required" data-validation-required-message="Please enter date" />
-                        <p class="help-block text-danger"></p>
-                            
-                        </div>
-                        <!-- Check-out Date -->
-                        <div class="col-md-4">
-                            <label for="checkout-date">Check-out Date</label>
-                            <input type="text" class="form-control datetimepicker-input" id="date-2"
-                            data-toggle="datetimepicker" data-target="#date-2" placeholder="E.g. MM/DD/YYYY"
-                            required="required" data-validation-required-message="Please enter date" />
-                        <p class="help-block text-danger"></p>
-                        </div>
-                        <!-- Number of Guests -->
-                        <div class="col-md-6">
-                            <label>Adult</label>
-                            <select class="custom-select" id="adult" required="required"
-                                data-validation-required-message="Please select one" />
+    <!-- Booking Form Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <form id="hotelBookingForm">
+                <h3><center style="color: white;">Book Your Stay</center></h3>
+    
+                <div class="row">
+                    <!-- Check-in Date -->
+                    <div class="col-md-4">
+                        <label for="checkin-date">Check-in Date</label>
+                        <input type="date" class="form-control datetimepicker-input" id="date-1" name="checkin-date" 
+                            placeholder="E.g. MM/DD/YYYY" required>
+                    </div>
+    
+                    <!-- Check-out Date -->
+                    <div class="col-md-4">
+                        <label for="checkout-date">Check-out Date</label>
+                        <input type="date" class="form-control datetimepicker-input" id="date-2" name="checkout-date" 
+                            placeholder="E.g. MM/DD/YYYY" required>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <!-- Number of Adults -->
+                    <div class="col-md-6">
+                        <label for="adult">Adult</label>
+                        <select class="custom-select" id="adult" name="adult" required>
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -104,243 +103,286 @@
                             <option value="8">8</option>
                             <option value="9">9</option>
                             <option value="10">10</option>
-                            </select>
-                            <p class="help-block text-danger"></p>
-                        </div>
+                        </select>
                     </div>
-
-                   <center><div class="row">
-                        <!-- Room Type -->
-                        <div class="col-md-6">
-                         <label>KId</label>
-                    <select class="custom-select" id="kid" required="required"
-                        data-validation-required-message="Please select one" />
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    </select>
-                    <p class="help-block text-danger"></p>
-
-                    </div></div></center>
-
-                    <div class="row">
-                        <!-- Room Type -->
-                        <div class="col-md-6">
-                    <label>Email</label>
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="E.g. email@example.com" required="required"
-                                        data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                        <div class="row">
-                        <!-- Room Type -->
-                        <div class="col-md-6">
-                            <label for="room-type">Room Type</label>
-                            <select id="room-type" name="room-type" class="form-control" required>
-                                <option value="single">Single Room</option>
-                                <option value="double">Double Room</option>
-                                <option value="suite">Suite</option>
-                            </select>
-                        </div>
-                        <!-- Special Requests -->
-                        <div class="col-md-6">
-                            <label for="special-requests">Special Requests</label>
-                            <textarea id="special-requests" name="special-requests" class="form-control"
-                                rows="3"></textarea>
-                        </div>
-                    </div>
-
-
     
-                  <center>  <br><br><br><br><br><br><button type="submit" class="btn btn-primary"><a href="room.html">Book Now</a></button></center>
-                    <section id="confirmation" class="confirmation-section">
-                        <div class="container">
-                            <h2 style="color: white;"><center><br><br>Your Booking is Confirmed</center></h2>
-                            <p style="color: white;"><center>Thank you for booking with us. Here are your booking details:</center></p>
-                            <ul>
-                                <li><strong>Check-in Date:</strong> <span id="confirm-checkin"></span></li>
-                                <li><strong>Check-out Date:</strong> <span id="confirm-checkout"></span></li>
-                                <li><strong>Guests:</strong> <span id="confirm-guests"></span></li>
-                                <li><strong>Room Type:</strong> <span id="confirm-room-type"></span></li>
-                                <li><strong>Special Requests:</strong> <span id="confirm-special-requests"></span></li>
-                            </ul>
-                        </div>
-                    </section>
-                </form>
-                
-            </div>
-
-            <!-- Booking Confirmation Page -->
-            
-        </section>
-        <script>
-            // Example script to display confirmation data (using query string or session data)
-            document.getElementById('confirm-checkin').innerText = localStorage.getItem('checkin-date');
-            document.getElementById('confirm-checkout').innerText = localStorage.getItem('checkout-date');
-            document.getElementById('confirm-guests').innerText = localStorage.getItem('guests');
-            document.getElementById('confirm-room-type').innerText = localStorage.getItem('room-type');
-            document.getElementById('confirm-special-requests').innerText = localStorage.getItem('special-requests');
-        </script>
-
-
-
-
-
-
-
-
-
-<div id="amenities">
-    <div class="container">
-        <div class="section-header">
-            <h2>Hotel Services</h2>
-            
+                    <!-- Number of Kids -->
+                    <div class="col-md-6">
+                        <label for="kid">Kid</label>
+                        <select class="custom-select" id="kid" name="kid" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E.g. email@example.com" required>
+                    </div>
+    
+                    <!-- Room Type -->
+                    <div class="col-md-6">
+                        <label for="room-type">Room Type</label>
+                        <select id="room-type" name="room-type" class="form-control" required>
+                            <option value="single">Single Room</option>
+                            <option value="double">Double Room</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <!-- Special Requests -->
+                    <div class="col-md-12">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" name="special-requests" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+    
+                <center>
+                    <br><br>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </center>
+            </form>
+    
+            <!-- Confirmation Message -->
+            <section id="confirmation" class="confirmation-section" style="display: none;">
+                <div class="container">
+                    <h2 style="color: white;"><center>Your Booking is Confirmed</center></h2>
+                    <p style="color: white;"><center>Thank you for booking with us. Here are your booking details:</center></p>
+                    <ul>
+                        <li><strong>Check-in Date:</strong> <span id="confirm-checkin"></span></li>
+                        <li><strong>Check-out Date:</strong> <span id="confirm-checkout"></span></li>
+                        <li><strong>Adults:</strong> <span id="confirm-adults"></span></li>
+                        <li><strong>Kids:</strong> <span id="confirm-kids"></span></li>
+                        <li><strong>Room Type:</strong> <span id="confirm-room-type"></span></li>
+                        <li><strong>Special Requests:</strong> <span id="confirm-special-requests"></span></li>
+                    </ul>
+                </div>
+            </section>
         </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-2"></i>
-                    <h3>Air Conditioner</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </div>
+    </section>
+
+    <div id="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hotel Services</h2>
+
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-3"></i>
-                    <h3>Bathtub</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-2"></i>
+                        <h3>Air Conditioner</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-4"></i>
-                    <h3>Shower</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-3"></i>
+                        <h3>Bathtub</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-6"></i>
-                    <h3>Television</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-4"></i>
+                        <h3>Shower</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-7"></i>
-                    <h3>WiFi</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-6"></i>
+                        <h3>Television</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-8"></i>
-                    <h3>Telephone</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-7"></i>
+                        <h3>WiFi</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-9"></i>
-                    <h3>Mini Bar</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-8"></i>
+                        <h3>Telephone</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <i class="icon icon-10"></i>
-                    <h3>Kitchen</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-9"></i>
+                        <h3>Mini Bar</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <i class="icon icon-10"></i>
+                        <h3>Kitchen</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-        <!-- Footer Section Start -->
-        <div id="call-us">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Click Below to Call Us</h2>
-                    <p>
-                        Call us today to start planning your dream vacation! Our team is ready to help with personalized itineraries and exclusive deals.For any query, 
-                        <br>we’re here to assist you.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="tel:+12345678900">+1 234 567 8900</a>
-                    </div>
+    <!-- Footer Section Start -->
+    <div id="call-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Click Below to Call Us</h2>
+                <p>
+                    Call us today to start planning your dream vacation! Our team is ready to help with personalized
+                    itineraries and exclusive deals.For any query,
+                    <br>we’re here to assist you.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <a href="tel:+12345678900">+1 234 567 8900</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="social">
-                            <a href="">
-                                <li class="fa fa-instagram"></li>
-                            </a>
-                            <a href="">
-                                <li class="fa fa-twitter"></li>
-                            </a>
-                            <a href="">
-                                <li class="fa fa-facebook-f"></li>
-                            </a>
-                        </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="social">
+                        <a href="">
+                            <li class="fa fa-instagram"></li>
+                        </a>
+                        <a href="">
+                            <li class="fa fa-twitter"></li>
+                        </a>
+                        <a href="">
+                            <li class="fa fa-facebook-f"></li>
+                        </a>
                     </div>
-                    <div class="col-12">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                        
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                
                 </div>
+                <div class="col-12">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-        <!-- Footer Section End -->
+    </div>
+    <!-- Footer Section End -->
 
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-        <!-- Vendor JavaScript File -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/jquery/jquery-migrate.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="vendor/easing/easing.min.js"></script>
-        <script src="vendor/stickyjs/sticky.js"></script>
-        <script src="vendor/superfish/hoverIntent.js"></script>
-        <script src="vendor/superfish/superfish.min.js"></script>
-        <script src="vendor/wow/wow.min.js"></script>
-        <script src="vendor/slick/slick.min.js"></script>
-        <script src="vendor/tempusdominus/js/moment.min.js"></script>
-        <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <!-- Vendor JavaScript File -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-migrate.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/easing/easing.min.js"></script>
+    <script src="vendor/stickyjs/sticky.js"></script>
+    <script src="vendor/superfish/hoverIntent.js"></script>
+    <script src="vendor/superfish/superfish.min.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="vendor/tempusdominus/js/moment.min.js"></script>
+    <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
 
-        <!-- Booking Javascript File -->
-        <script src="js/booking.js"></script>
-        <script src="js/jqBootstrapValidation.min.js"></script>
+    <!-- Booking Javascript File -->
+    <!-- <script src="js/booking.js"></script> -->
+    <script src="js/jqBootstrapValidation.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+
+    <!-- Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("hotelBookingForm").addEventListener("submit", async function (event) {
+                event.preventDefault(); // Prevent default form submission
     
+                // Get form data
+                const email = document.getElementById("email").value;
+                const checkinDate = document.getElementById("date-1").value;
+                const checkoutDate = document.getElementById("date-2").value;
+                const adults = document.getElementById("adult").value;
+                const kids = document.getElementById("kid").value;
+                const roomType = document.getElementById("room-type").value;
+                const specialRequests = document.getElementById("special-requests").value;
+    
+                // Data to send
+                const bookingData = {
+                    email,
+                    checkinDate,
+                    checkoutDate,
+                    adults,
+                    kids,
+                    roomType,
+                    specialRequests
+                };
 
-        <!-- Main Javascript File -->
-        <script src="js/main.js"></script>
+                console.log(bookingData)
+    
+                try {
+                    // Send POST request to backend
+                    const response = await fetch("http://localhost:8080/hotel/add", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(bookingData)
+                    });
+    
+                    if (response.ok) {
+                        const result = await response.json();
+                        
+                        // Show Confirmation Section
+                        document.getElementById("confirmation").style.display = "block";
+    
+                        // Update Confirmation Details
+                        document.getElementById("confirm-checkin").innerText = checkinDate;
+                        document.getElementById("confirm-checkout").innerText = checkoutDate;
+                        document.getElementById("confirm-adults").innerText = adults;
+                        document.getElementById("confirm-kids").innerText = kids;
+                        document.getElementById("confirm-room-type").innerText = roomType;
+                        document.getElementById("confirm-special-requests").innerText = specialRequests;
+    
+                        // Clear form
+                        document.getElementById("hotelBookingForm").reset();
+                    } else {
+                        alert("Booking failed. Please try again.");
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
+                    alert("An error occurred while booking.");
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -38,7 +38,7 @@
                 <input type="number" id="packagePrice" class="input-field" placeholder="Package price" required>
                 <textarea id="packageDescription" class="input-field" placeholder="Package Description"
                     required></textarea>
-                <input type="file" id="packageImage" class="input-field">
+                <input type="text" id="packageImage" class="input-field">
                 <button type="button" id="subtn" class="action-button">Add Package</button>
             </form>
         </div>
@@ -70,6 +70,7 @@
                 let name = document.getElementById('packageName').value
                 let located = document.getElementById('packageDescription').value 
                 let price =document.getElementById('packagePrice').value
+                let image = document.getElementById("packageImage").value
                 
 
                 let response = await fetch('http://localhost:8080/package/add-package', {
@@ -77,7 +78,7 @@
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({name,located,price})
+                    body: JSON.stringify({name,located,price,image})
                 })
 
                 let result = await response.json()

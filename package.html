@@ -580,7 +580,7 @@
 
 
 
-            const createbooking = () => {
+            const createbooking = (price,name,located,image) => {
                 //main package div that includes all the packages
                 let package_div = document.getElementById('packages')
 
@@ -594,6 +594,7 @@
                 package_img_div.classList.add("img")
 
                 let package_img = document.createElement("img")
+                package_img.src = image
                 package_img_div.appendChild(package_img)
 
 
@@ -601,7 +602,7 @@
                 let package_price_div = document.createElement('div')//main
                 package_price_div.classList.add('packages-price', 'py-2', 'px-4')
                 let packages_price = document.createElement('h2')
-                packages_price.innerText = "hellow"
+                packages_price.innerText = price
                 package_price_div.appendChild(packages_price)
 
 
@@ -610,11 +611,11 @@
                 package_description_div.classList.add("content")
 
                 let package_place_name = document.createElement("h3")
-                package_place_name.innerText = "kullu"
+                package_place_name.innerText = name
                 package_description_div.appendChild(package_place_name)
 
                 let package_place_location = document.createElement('p')
-                package_place_location.innerText = "jammu"
+                package_place_location.innerText = located
                 package_description_div.appendChild(package_place_location)
 
 
@@ -652,9 +653,8 @@
                     const data = await response.json(); // Convert response to JSON
 
                     for(let i in data){
-                        console.log(`${i} is ${data[i].name}`)
+                        createbooking(data[i].price,data[i].name,data[i].located,data[i].image)
                     }
-                    console.log("Packages Data:", data);
                 } catch (err) {
                     console.error("Server error:", err);
                 }

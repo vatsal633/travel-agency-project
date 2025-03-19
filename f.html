@@ -37,9 +37,9 @@
         <ul>
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About US</a></li>
-            
-            
-            <li><a href="register.html">Register</a></li> 
+
+
+            <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li class="nav-item dropdown">
@@ -48,11 +48,11 @@
                     <li><a href="package.html" class="dropdown-item">package</a></li>
                     <li><a href="hotrelplaces.html" class="dropdown-item">Booking</a></li>
                     <li><a href="travelguide.html" class="dropdown-item">Travel Guides</a></li>
-                
-            
+
+
                 </ul>
             </li>
-            </ul>
+        </ul>
     </nav>
 </header>
 
@@ -97,53 +97,49 @@
 <!-- Header Section End -->
 
 <!-- Flight Search Section Start -->
-<section id="">
+<form id="flightForm">
     <div class="container-flight flight-search">
         <div class="section-header">
-            <h2><B>Search Flights</B></h2>
-            <p><B>Find the best flights for your trip</B></p>
+            <h2><b>Search Flights</b></h2>
+            <p><b>Find the best flights for your trip</b></p>
         </div>
-        
-        <!-- Flight Search Form -->
-        <div class="form-wrapper">
-       
-            
-            <div class="row">
 
+        <div class="form-wrapper">
+            <div class="row">
                 <!-- Column 1 -->
                 <div class="col-md-6">
-                    
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"
+                            required>
                     </div>
 
                     <div class="form-group">
                         <label for="from">From</label>
-                        <input type="text" class="form-control" id="from" name="from" placeholder="Enter departure city" required>
+                        <input type="text" class="form-control" id="from" name="from" placeholder="Enter departure city"
+                            required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="to">To</label>
                         <select class="form-control" id="to" name="to" required>
                             <option value="" disabled selected>To</option>
-                            <option value="UDAIPUR">UDAIPUR</option><!--mountabu,JAIPUR,UDAIPUR-->
-                            <option value="KULLU-MANALI">KULLU-MANALI</option> <!--KULUMANALI-->
-                            <option value="JUBBARHATTI">JUBBARHATTI</option> <!--SHIMLA-->
-                            
-                            <option value="KOCHI">KOCHI</option> <!--KERALA-->
-                            <option value="VELANA">VELANA</option> <!--MALDIVES-->
+                            <option value="UDAIPUR">UDAIPUR</option>
+                            <option value="KULLU-MANALI">KULLU-MANALI</option>
+                            <option value="JUBBARHATTI">JUBBARHATTI</option>
+                            <option value="KOCHI">KOCHI</option>
+                            <option value="VELANA">VELANA</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="departure-date">Departure Date</label>
-                        <input type="date" class="form-control" id="departure-date" name="departure-date" required>
+                        <label for="departure_date">Departure Date</label>
+                        <input type="date" class="form-control" id="departure_date" name="departure_date" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="return-date">Return Date</label>
-                        <input type="date" class="form-control" id="return-date" name="return-date">
+                        <label for="return_date">Return Date</label>
+                        <input type="date" class="form-control" id="return_date" name="return_date">
                     </div>
                 </div>
 
@@ -161,44 +157,47 @@
                     </div>
 
                     <div class="payment-options">
-                        <label for="payment"><h1>Payment:</h1></label>
+                        <h1>Payment:</h1>
                         <label><input type="radio" name="payment" value="credit" required> Credit Card</label><br>
-                        <label><input type="radio" name="payment" value="paypal" required> PayPal</label><br>
-                        <label><input type="radio" name="payment" value="bank" required> Bank Transfer</label>
+                        <label><input type="radio" name="payment" value="debit" required> Debit Card</label><br>
+                        <label><input type="radio" name="payment" value="cash" required> Cash</label>
                     </div>
 
                     <div class="additional-services">
-                        <label for="additional-services"><h1>Services:</h1></label>
-                        <label><input type="checkbox" name="extra_luggage"> Extra Luggage</label><br>
-                        <label><input type="checkbox" name="meal"> In-Flight Meal</label><br>
-                        <label><input type="checkbox" name="window_seat"> Window Seat</label>
+                        <h1>Services:</h1>
+                        <label><input type="checkbox" name="extra_luggage" value="true"> Extra Luggage</label><br>
+                        <label><input type="checkbox" name="meal" value="true"> In-Flight Meal</label><br>
+                        <label><input type="checkbox" name="window_seat" value="true"> Window Seat</label>
                     </div>
 
                     <div class="form-group">
                         <label for="comments">Additional Requests:</label>
-                        <textarea id="comments" name="comments" class="form-control" placeholder="Enter any special requests..."></textarea>
+                        <textarea id="comments" name="comments" class="form-control"
+                            placeholder="Enter any special requests..."></textarea>
                     </div>
 
-                   <!-- Toast Notification Element -->
-<div id="toast" class="toast">
-    <p>Flight booked successfully!</p>
-</div>
+                    <!-- Toast Notification -->
+                    <div id="toast" class="toast" style="display:none;">
+                        <p>Flight booked successfully!</p>
+                    </div>
 
-<!-- Form with Button -->
-<div class="form-group">
-    <button type="submit" class="btn btn-primary btn-block "onclick="showToast()">Book Now</button>
-</div>
-
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+                    </div>
                 </div>
-                </div>
-                
-
             </div>
-        </form>
+        </div>
     </div>
-</section>
+</form>
 
-<div id="call-us">
+
+
+<div id="data">
+
+</div>
+
+<!-- <div id="call-us">
     <div class="container">
         <div class="section-header">
             <h2>Click Below to Call Us</h2>
@@ -213,11 +212,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Call Section End -->
 
 <!-- Footer Section Start -->
-<div id="footer">
+<!-- <div id="footer">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -247,9 +246,9 @@
 </div> -->
 
 
-<footer class="new_footer">
+<!-- <footer class="new_footer">
     &copy; 2025 Flight Free. All rights reserved.
-</footer>
+</footer> -->
 
 <!-- Footer Section End -->
 
@@ -281,4 +280,65 @@
 
 <!-- Main Javascript File -->
 <script src="js/main.js"></script>
-<script src="js/myjs.js"></script>
+<!-- <script src="js/myjs.js"></script> -->
+
+<script>
+    let formData = {}
+    document.addEventListener("DOMContentLoaded", async function () {
+        const form = document.getElementById("flightForm");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevents actual form submission
+
+            // Get all input fields, select fields, and textareas
+            const inputs = form.querySelectorAll("input, select, textarea");
+
+            inputs.forEach((input) => {
+                if (input.type === "radio") {
+                    if (input.checked) {
+                        formData[input.name] = input.value;
+                    }
+                } else if (input.type === "checkbox") {
+                    formData[input.name] = input.checked;
+                } else {
+                    formData[input.name] = input.value;
+                }
+            });
+
+            try {
+
+                let res = await fetch("http://localhost:8080/flight/add", {
+                    method:"POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                })
+
+                console.log("from submited")
+            } catch (err) {
+                console.log(err)
+            }
+
+
+            console.log(formData); // Log collected data
+            document.getElementById("data").innerHTML = JSON.stringify(formData)
+            showToast(); // Show the toast notification
+
+
+        });
+    });
+
+
+
+    // Function to show toast notification
+    function showToast() {
+        const toast = document.getElementById("toast");
+        toast.style.display = "block"; // Show toast
+
+        setTimeout(() => {
+            toast.style.display = "none"; // Hide after 3 sec
+        }, 3000);
+    }
+
+</script>
