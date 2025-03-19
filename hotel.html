@@ -61,6 +61,7 @@
 
                     </ul>
                 </li>
+
             </ul>
         </nav>
     </header>
@@ -256,28 +257,28 @@
     <!-- Main Javascript File -->
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", async function () {
             document.getElementById("hotelBookingForm").addEventListener("submit", async function (event) {
                 event.preventDefault(); // Prevent default form submission
     
                 // Get form data
                 const email = document.getElementById("email").value;
-                const checkinDate = document.getElementById("date-1").value;
-                const checkoutDate = document.getElementById("date-2").value;
+                const checkin_date = document.getElementById("date-1").value;
+                const checkout_date = document.getElementById("date-2").value;
                 const adults = document.getElementById("adult").value;
                 const kids = document.getElementById("kid").value;
-                const roomType = document.getElementById("room-type").value;
-                const specialRequests = document.getElementById("special-requests").value;
+                const room_type = document.getElementById("room-type").value;
+                const special_requests = document.getElementById("special-requests").value;
     
                 // Data to send
                 const bookingData = {
                     email,
-                    checkinDate,
-                    checkoutDate,
+                    checkin_date,
+                    checkout_date,
                     adults,
                     kids,
-                    roomType,
-                    specialRequests
+                    room_type,
+                    special_requests
                 };
 
                 console.log(bookingData)
@@ -299,12 +300,12 @@
                         document.getElementById("confirmation").style.display = "block";
     
                         // Update Confirmation Details
-                        document.getElementById("confirm-checkin").innerText = checkinDate;
-                        document.getElementById("confirm-checkout").innerText = checkoutDate;
+                        document.getElementById("confirm-checkin").innerText = checkin_date;
+                        document.getElementById("confirm-checkout").innerText = checkout_date;
                         document.getElementById("confirm-adults").innerText = adults;
                         document.getElementById("confirm-kids").innerText = kids;
-                        document.getElementById("confirm-room-type").innerText = roomType;
-                        document.getElementById("confirm-special-requests").innerText = specialRequests;
+                        document.getElementById("confirm-room-type").innerText = room_type;
+                        document.getElementById("confirm-special-requests").innerText = special_requests;
     
                         // Clear form
                         document.getElementById("hotelBookingForm").reset();
