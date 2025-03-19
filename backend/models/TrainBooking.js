@@ -1,14 +1,46 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const TrainBookingSchema = new mongoose.Schema({
-    passengerName: { type: String, required: true },
-    email: { type: String, required: true },
-    phone: { type: String, required: true },
-    location: { type: String, required: true },
-    destination: { type: String, required: true },
-    date: { type: String, required: true },
-    trainClass: { type: String, required: true },
-    createdAt: { type: Date, default: Date.now }
+const trainBookingSchema = new mongoose.Schema({
+    departureDate: {
+        type: String,
+        required: true
+    },
+    sourceStation: {
+        type: String,
+        required: true
+    },
+    destinationStation: {
+        type: String,
+        required: true
+    },
+    trainClass: {
+        type: String,
+        required: true,
+        enum: ["sleeper", "3-tier", "2-tier", "1-tier"] // Allowed values
+    },
+    passengerName: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    passengerEmail: {
+        type: String,
+        required: true,
+        trim: true,
+        lowercase: true
+    },
+    passengerPhone: {
+        type: String,
+        required: true,
+        trim: true,
+        match: /^[0-9]{10}$/ // Ensures only a 10-digit phone number
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-module.exports = mongoose.model('TrainBooking', TrainBookingSchema);
+
+const TrainBooking = mongoose.model("TrainBooking", trainBookingSchema);
+export default TrainBooking

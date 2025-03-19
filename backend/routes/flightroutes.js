@@ -3,12 +3,12 @@ import { flightmodel } from "../models/flightmodel.js";
 import express from "express"
 
 
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/user_data", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-    .then(() => console.log(" database connected successfully"))
-    .catch((err) => console.log("error while connecting database", err))
+// mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/user_data", {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+//     .then(() => console.log(" database connected successfully"))
+//     .catch((err) => console.log("error while connecting database", err))
 
 const router = express.Router()
 

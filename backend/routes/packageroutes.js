@@ -4,12 +4,12 @@ import {packages}  from "../models/packages.js";
 
 const router = express.Router()
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/package',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(()=>console.log("package database connected successfully"))
-.catch((err)=>console.log("error while connecting package database",err))
+// mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/package',{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+// .then(()=>console.log("package database connected successfully"))
+// .catch((err)=>console.log("error while connecting package database",err))
 
 //route for adding a new package
 router.post('/add-package',async(req,res)=>{

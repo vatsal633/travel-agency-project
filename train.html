@@ -102,7 +102,7 @@
                             <div class="select-container">
                                 <label for="location" class="col-12 col-md-4 text-center ">Location</label>
 
-                                <select id="location" name="location"  class="location" onchange="updateStates()">
+                                <select id="location" name="location" class="location" onchange="updateStates()">
                                     <option value="">--Select Location--</option>
                                     <option value="Udaipur">Udaipur</option>
                                     <option value="Kullu-Manali">Kullu-Manali</option>
@@ -223,7 +223,54 @@
                     </form>
                 </div>
 
-              
+                <!-- Ticket Summary (right side) -->
+                <!-- <div class="col-12 col-md-6">
+                    <div class="ticket-summary">
+                        <h4>Your Ticket Summary</h4>
+                        <p>Departure Date: <span id="summary-departure-date">-</span></p>
+                        <p>Source Station: <span id="summary-source-station">-</span></p>
+                        <p>Destination Station: <span id="summary-destination-station">-</span></p>
+                        <p>Train Class: <span id="summary-train-class">-</span></p>
+                        <p>Passenger: <span id="summary-passenger-name">-</span></p>
+                        <hr>
+                        <p><strong>Total Fare: <span id="total-fare">-</span></strong></p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add additional styles -->
+    <style>
+        .ticket-summary {
+            background-color: #ffffff1b;
+            padding: 20px;
+
+
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-summary h4 {
+            margin-bottom: 15px;
+        }
+
+        .ticket-summary p {
+            margin-bottom: 10px;
+        }
+
+        .white-box {
+            background-color: rgb(244, 239, 239);
+            color: black;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+    </style>
+
+    <!-- Train Ticket Booking Section End -->
 
 
     <!-- The rest of your content here -->
@@ -307,6 +354,42 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById("train-booking-form").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const formData = {
+                departureDate: document.getElementById("date-1").value,
+                sourceStation: document.getElementById("location").value,
+                destinationStation: document.getElementById("route").value,
+                trainClass: document.getElementById("train-class").value,
+                passengerName: document.getElementById("passenger-name").value,
+                passengerEmail: document.getElementById("passenger-email").value,
+                passengerPhone: document.getElementById("passenger-phone").value
+            };
+
+            console.log(formData)
+
+            try {
+                const response = await fetch("http://localhost:8080/train/book", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+
+            } catch (error) {
+                console.error("Network error:", error);
+                alert("Something went wrong! Please try again later.");
+            }
+
+        });
+
+    </script>
 
 </body>
 

@@ -4,14 +4,6 @@ import mongoose from 'mongoose';
 const router = express.Router();
 
 
-
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/user_data', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => { console.log("login data connected successfully") })
-.catch((err) => { console.log("facing some error while connecting to database", err) })
-
 //get req for register
 router.post('/register', async (req, res) => {
     try {
