@@ -9,6 +9,7 @@ import flightrouter from "./routes/flightroutes.js"
 import hotelroutes from "./routes/hotelroutes.js"
 import carrouter from "./routes/carrouter.js"
 import trainRouter from "./routes/trainRoutes.js"
+import adminRouter from "./routes/adminRoutes.js"
 const app = express()
 
 const port = process.env.PORT || 8080; // Use environment variable for 
@@ -35,6 +36,7 @@ app.use('/flight',flightrouter)
 app.use("/hotel",hotelroutes)
 app.use("/car",carrouter)
 app.use('/train',trainRouter)
+app.use('/admin',adminRouter)
 
 
 //connecting to database
