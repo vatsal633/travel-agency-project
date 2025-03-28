@@ -4,7 +4,7 @@ let email = document.getElementById('email');
 let password = document.getElementById('password');
 let loginbtn = document.getElementById('loginbtn');
 
-loginbtn.addEventListener('click', async function(event) {
+loginbtn.addEventListener('click', async function (event) {
     event.preventDefault(); // Fix: Use 'event' passed to the function
 
     if (email.value.trim() === '' || password.value.trim() === '') {
@@ -12,45 +12,47 @@ loginbtn.addEventListener('click', async function(event) {
     } else {
 
         //making the api for store data in db
-        try{
+        try {
 
-            const response = await fetch('http://localhost:8080/api/auth/login',{
-                method:"POST",
+            const response = await fetch('http://localhost:8080/api/auth/login', {
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body:JSON.stringify({email,password})
+                body: JSON.stringify({
+                    email: email.value.trim() ,
+                    password: password.value.trim(), 
+                })
             })
 
 
-            let result = response.json()
+            let result = await response.json()
 
-            if(response.status(404)){
-                console.log('user not found or something else')
+            if (result.status === 404) {
+                alert('user not found or something else')
+                return;
             }
 
-           
-
-            if(response.status===200){
-                console.log("loged in successfuly")
-                window.location.href = "/login.html";
+            if (response.status === 400) {
+                alert('Invalid email or password');
+                return;
             }
-        }catch(err){
+
+
+
+            if (response.status === 200) {
+                alert("Logged in successfully");
+
+                // Storing token instead of password
+                localStorage.setItem('user', JSON.stringify({
+                    email: result.user.email,
+                    token: result.token // Ensure your backend returns a JWT token
+                }));
+
+                window.location.href = "/login.html"; // Redirect to dashboard
+            }
+        } catch (err) {
             console.log("error while login")
-        }   
-
-
-
-        //storing information in localstorage
-        let user = {
-            email: email.value.trim(),
-            password: password.value.trim()
-        };
-
-        // Save user data to localStorage
-        localStorage.setItem('user', JSON.stringify(user));
-
-        alert('User data saved successfully!');
-        console.log('Saved User:', user); // Debugging output
+        }
     }
 });
